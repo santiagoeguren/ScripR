@@ -23,7 +23,7 @@ library(urca)
 #Armar serie x[t]
 ##############################################################################
 
-tita_1=-0.9
+tita_1=0.9
 tita_2=0
 tita_3=0
 tita_4=0
@@ -200,7 +200,7 @@ summary(lm(x_t_0~x_t_1))
 
 cor(x_t_0,x_t_1)
 
--0.512181*(sd(x_t_0)/sd(x_t_1))
+0.492732*(sd(x_t_0)/sd(x_t_1))
 
 
 
@@ -213,7 +213,7 @@ summary(lm(x_t_0~x_t_2))
 
 cor(x_t_0,x_t_2)
 
-0.002482  *(sd(x_t_0)/sd(x_t_2))
+-0.004785*(sd(x_t_0)/sd(x_t_2))
 
 
 ###############################################################################
@@ -236,14 +236,14 @@ ARIMA_prediccion
 #T+1
 summary(fit)
 
--0.8966*z_t[length(z_t)] + 0*z_t[length(z_t)-1]+0*z_t[length(z_t)-2]+ 0 *z_t[length(z_t)-3]+ 1.9997
+0.8995 *z_t[length(z_t)] + 0*z_t[length(z_t)-1]+0*z_t[length(z_t)-2]+ 0 *z_t[length(z_t)-3]+ 1.9874
 
 
 
 
 #T+2
 
--0.8966 *0 + 0*z_t[length(z_t)]+ 0*z_t[length(z_t)-1]+ 0 *z_t[length(z_t)-2] +  1.9997
+0.8995*0 + 0*z_t[length(z_t)]+ 0*z_t[length(z_t)-1]+ 0 *z_t[length(z_t)-2] + 1.9874
 
 
 #T+3
@@ -284,7 +284,7 @@ summary(lm(x_t_0~x_t_1+x_t_2+x_t_3+x_t_4+x_t_5+x_t_6+x_t_7+x_t_8+x_t_9+x_t_10))
 
 summary(fit)
 
-tita_1_estimada= -0.8966 
+tita_1_estimada= 0.8995
 
 sum_a=0
 
@@ -302,7 +302,7 @@ while(i<=200){
 
 summary(fit)
 
-mean_estimada=1.9997
+mean_estimada=1.9874
 
 a_0= mean_estimada*(1-sum_a)
 a_0
