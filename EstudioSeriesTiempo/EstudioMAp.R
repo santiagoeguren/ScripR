@@ -23,7 +23,7 @@ library(urca)
 #Armar serie x[t]
 ##############################################################################
 
-tita_1=0.9
+tita_1=-0.9
 tita_2=0
 tita_3=0
 tita_4=0
@@ -66,6 +66,12 @@ sgma*sgma*(1+tita_1*tita_1+tita_2*tita_2+tita_3*tita_3+tita_4*tita_4)
 #Graficar
 
 plot(t,x_t,xlab="t",ylab="x_t",type="l",col="blue")
+
+
+
+
+
+
 
 
 ###############################################################################
@@ -187,9 +193,10 @@ x_t_9=x_t_9[-c(1:1)]
 length(x_t_9)
 
 
-#-9
+#-10
 x_t_10=x_t[-(length(x_t):(length(x_t)-9))]
 length(x_t_10)
+
 
 #-------------------------------------------------------------
 #Xt-1
@@ -200,7 +207,7 @@ summary(lm(x_t_0~x_t_1))
 
 cor(x_t_0,x_t_1)
 
-0.492732*(sd(x_t_0)/sd(x_t_1))
+0.49217 *(sd(x_t_0)/sd(x_t_1))
 
 
 
@@ -213,7 +220,7 @@ summary(lm(x_t_0~x_t_2))
 
 cor(x_t_0,x_t_2)
 
--0.004785*(sd(x_t_0)/sd(x_t_2))
+0.003216*(sd(x_t_0)/sd(x_t_2))
 
 
 ###############################################################################
@@ -231,19 +238,19 @@ ARIMA_prediccion
 
 
 #----------------------------------------------------------------------------------------
-#Predicion real en base a z_t
+#Predicion en base al concepto de causalidad
 
 #T+1
 summary(fit)
 
-0.8995 *z_t[length(z_t)] + 0*z_t[length(z_t)-1]+0*z_t[length(z_t)-2]+ 0 *z_t[length(z_t)-3]+ 1.9874
+-0.9032 *z_t[length(z_t)] + 0*z_t[length(z_t)-1]+0*z_t[length(z_t)-2]+ 0 *z_t[length(z_t)-3]+  1.9919
 
 
 
 
 #T+2
 
-0.8995*0 + 0*z_t[length(z_t)]+ 0*z_t[length(z_t)-1]+ 0 *z_t[length(z_t)-2] + 1.9874
+0.8993*0 + 0*z_t[length(z_t)]+ 0*z_t[length(z_t)-1]+ 0 *z_t[length(z_t)-2] + 1.9919
 
 
 #T+3
@@ -263,7 +270,7 @@ qnorm(0.975, mean(x_t),sd(x_t))
 
 
 #----------------------------------------------------------------------------------------
-#Predicion real en base a X_t,.....
+#Predicion en base al concepto de invertibilidad
 
 
 
@@ -284,7 +291,7 @@ summary(lm(x_t_0~x_t_1+x_t_2+x_t_3+x_t_4+x_t_5+x_t_6+x_t_7+x_t_8+x_t_9+x_t_10))
 
 summary(fit)
 
-tita_1_estimada= 0.8995
+tita_1_estimada=  -0.9032
 
 sum_a=0
 
@@ -302,7 +309,7 @@ while(i<=200){
 
 summary(fit)
 
-mean_estimada=1.9874
+mean_estimada=1.9999
 
 a_0= mean_estimada*(1-sum_a)
 a_0
@@ -366,7 +373,7 @@ ARIMA_prediccion
 
 
 #-----------------------------------------------------------------------------
-#Causalidad
+#Invertibility
 
 
 
@@ -400,9 +407,9 @@ z_t[length(z_t)]
 #---------------------------------------------------------------------
 #Estudio de multicolinealidad
 
-x1=rnorm(10000,0,1)
-x2=rnorm(10000,0,1)+1*x1
 
+x2=rnorm(10000,0,1)
+x1=rnorm(10000,0,1)+1*x2
 
 y=NULL
 
@@ -410,74 +417,44 @@ i=1
 
 while (i<=10000) {
   
-  y[i]=10+0.5*x1[i]+0.5*x2[i]+rnorm(1,0,1)
+  y[i]=0+0.5*x1[i]+0.5*x2[i]+rnorm(1,0,1)
   
   i=i+1
   
 }
 
-#---------------------------------------------
-#beta=cov(y,x1)/var(x1)
-
-cov(y,x1)/var(x1)
 
 
-#------------------------------------------------------------------------------
-#Para x1: el supuesto es que x1 en la independiente
-#Mide el aporte real de x1
+
+#-------------------------------------------------------------------------------
+#Para x1
+
 summary(lm(y~x1))
 
-
-#Para x2
-
-
-fit_x2_x1=lm(x2~x1)
-summary(fit_x2_x1)
-
-summary(lm(y~fit_x2_x1$residuals))
+#-------------------------------------------------------------------------------
+#¿Por qué 0.75?. Si x2=1 y x1=1+x2 = 1 +1 ---> y = 0.5*2+0.5*1=1.5 ---> si 
+#partimos de ordenada al origen x1 creción en 2 e y en 1.5, ---> la pendiente
+#1.5/2 = 0.75
 
 
 
+#-------------------------------------------------------------------------------
+#Eliminar el efecto de x2 en x1
+
+fit_x1_x2=lm(x1~x2)
+summary(fit_x1_x2)
+
+summary(lm(y~fit_x1_x2$residuals))
 
 
-
+#-------------------------------------------------------------------------------
 #Para x1 y x2
-summary(lm(y~x1))
+
 summary(lm(y~x1+x2))
 
 
-
-
-
-#------------------------------------------------------------------------------
-#Para x2: el supuesto es que x2 en la independiente
-#Mide el aporte real de x2
-summary(lm(y~x2))
-
-
-#Para x2
-
-
-fit_x2_x1=lm(x1~x2)
-summary(fit_x2_x1)
-
-summary(lm(y~fit_x2_x1$residuals))
-
-#Para x2 y x1
-summary(lm(y~x2))
-summary(lm(y~x2+x1))
-
-
-
-
-
-
-
-
-
-
 #-------------------------------------------------------------------------
-#Estimación
+#Estimación AFC
 
 
 acf2(x_t)
@@ -490,16 +467,14 @@ summary(lm(x_t_0~x_t_1))
 #Una forma
 summary(lm(x_t_0~x_t_1+x_t_2))
 
-fit_x_t_2_x_t_1=lm(x_t_2~x_t_1)
 
-summary(lm(x_t_0~fit_x_t_2_x_t_1$residuals))
+fit_x1_x2=lm(x_t_1~x_t_2)
+summary(lm(x_t_0~fit_x1_x2$residuals))
+
 
 #para X -3
 summary(lm(x_t_0~x_t_1+x_t_2+x_t_3))
 
-fit_x_t_2_x_t_1_x_t_3=lm(x_t_3~x_t_1+x_t_2)
-
-summary(lm(x_t_0~fit_x_t_2_x_t_1_x_t_3$residuals))
 
 
 
