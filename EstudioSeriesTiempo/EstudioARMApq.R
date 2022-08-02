@@ -28,7 +28,7 @@ tita_2=0
 tita_3=0
 tita_4=0
 
-fi_1=0.90
+fi_1=0.9
 fi_2=0
 fi_3=0
 fi_4=0
@@ -112,6 +112,7 @@ z_t_1=z_t[-length(z_t)]
 
 
 summary(lm(x_t_0~z_t_1))
+
 summary(lm(x_t_0~x_t_1))
 
 
@@ -240,6 +241,7 @@ length(x_t_10)
 #Xt-1
 
 acf2(x_t)
+
 plot(x_t_1,x_t_0)
 summary(lm(x_t_0~x_t_1))
 
@@ -280,6 +282,326 @@ ARIMA_prediccion
 
 
 
-
 #----------------------------------------------------------------------------------------
 #Predicion en base al concepto de causalidad
+
+
+
+
+#T+1
+summary(fit)
+
+
+
+x_T1=0
+
+fi_estimado= 0.8976
+tita_estimado= 0.8988
+constante= 20.0043*(1-fi_estimado)
+
+i=0
+
+while (i<=100) {
+  
+  
+  x_T1=x_T1+constante*(fi_estimado**i)+(fi_estimado+tita_estimado)*(fi_estimado**(i+1))*z_t[(length(z_t)-i)] 
+  
+  i=i+1
+  
+}
+
+x_T1
+
+
+
+
+#T+2
+
+z_t0=c(z_t,0)
+
+x_T2=0
+
+i=0
+
+while (i<=100) {
+  
+  
+  x_T2=x_T2+constante*(fi_estimado**i)+(fi_estimado+tita_estimado)*(fi_estimado**(i+1))*z_t0[(length(z_t0)-i)] 
+  
+  i=i+1
+  
+}
+
+x_T2
+
+
+
+
+#prediccion mediante estimación parametrica
+
+qnorm(0.025, mean(x_t),sd(x_t))
+qnorm(0.975, mean(x_t),sd(x_t))
+
+
+#----------------------------------------------------------------------------------------
+#Predicion real en base al concepto de invertibilidad
+
+
+
+
+
+#---------------------------------------------------------------------------------
+#Estimar a1,...,a10 en base al modelo lineal
+
+ARIMA_prediccion
+
+
+summary(lm(x_t_0~x_t_1+x_t_2+x_t_3+x_t_4+x_t_5+x_t_6+x_t_7+x_t_8+x_t_9+x_t_10))
+
+summary(fit)
+
+
+
+
+#---------------------------------------------------------------------------------
+#Estimar en forma teorica para xT+1
+
+
+
+#---------------------------------------------------------------------------------
+#Estimar en forma teorica para xT+1
+
+summary(fit)
+
+
+fi_1_estimada=0.8976
+tita_1_estimada=0.8988
+
+
+#Calcular a0
+
+sum_a=0
+
+i=0
+
+while(i<=200){
+  
+  sum_a=sum_a+((-1*tita_1_estimada)**i)
+  
+  i=i+1
+  
+}
+
+sum_a=(fi_1_estimada+tita_1_estimada)*sum_a
+sum_a
+
+summary(fit)
+
+mean_estimada= 20.0043
+
+a_0= mean_estimada*(1-sum_a)
+a_0
+
+
+#Calcular XT sin a0
+
+valor_XT_1=0
+
+i=0
+
+while(i<=200){
+  
+  valor_XT_1=valor_XT_1+((-1*tita_1_estimada)**i)*x_t[(length(x_t)-i)]
+  
+  i=i+1
+  
+}
+
+valor_XT_1=(fi_1_estimada+tita_1_estimada)*valor_XT_1
+
+valor_XT_1=valor_XT_1+a_0
+
+valor_XT_1
+
+ARIMA_prediccion
+
+
+
+
+
+#---------------------------------------------------------------------------------
+#Estimar en forma teorica para xT+2
+
+
+
+valor_XT_2=0
+
+
+
+x_t_XT_2=c(x_t,valor_XT_1)
+
+i=0
+
+while(i<=200){
+  
+  valor_XT_2=valor_XT_2+((-1*tita_1_estimada)**i)*x_t_XT_2[(length(x_t_XT_2)-i)]
+  
+  i=i+1
+  
+}
+
+valor_XT_2=(fi_1_estimada+tita_1_estimada)*valor_XT_2
+
+valor_XT_2=valor_XT_2+a_0
+
+valor_XT_2
+
+ARIMA_prediccion
+
+
+
+###############################################################################
+#Estudio PACF
+##############################################################################
+
+
+#---------------------------------------------------------------------
+#Estudio de multicolinealidad
+
+
+x2=rnorm(10000,0,1)
+e1=rnorm(10000,0,1)
+x1=e1+1*x2
+
+y=NULL
+
+i=1
+
+while (i<=10000) {
+  
+  y[i]=0+0.5*x1[i]+0.5*x2[i]+rnorm(1,0,1)
+  
+  i=i+1
+  
+}
+
+
+#------------------------------------------------------------------------------
+#Nota
+
+# y = 0.5 *x1 + 0.5 *x1
+
+#Si x1=e1+x2, reemplazamos: y=0.5*(e1+x2)+0.5*x2 = 0.5*e1+0.5*x2+0.5*x2
+#y=0.5*e1+1x2 [1]
+
+#Si x2=0.5*x1+e2, reemplazamos: y = 0.5*x1+0.5*(0.5*x1+e2)=0.5*x1+0.25*x1+0.5*e2
+#y=0.75*x1+0.5*e2      [2]
+
+
+
+
+#-------------------------------------------------------------------------------
+#Para x1
+#------------------------------------------------------------------------------
+
+#Regresion equación [2]
+
+
+#ACF 1
+summary(lm(y~x1))
+
+
+
+#-------------------------------------------------------------------------------
+#Eliminar el efecto de x2 en x1
+
+
+
+
+
+fit_x1_x2=lm(x1~x2)
+summary(fit_x1_x2)
+
+
+#Regresión equación [1]
+
+#PACF
+summary(lm(y~fit_x1_x2$residuals))
+
+plot(fit_x1_x2$residuals,y)
+
+
+plot(e1,y)
+summary(lm(y~e1))
+
+
+
+#-------------------------------------------------------------------------------
+#Para x2
+#-------------------------------------------------------------------------------
+
+#Regresión equación [1]
+
+#ACF 2
+summary(lm(y~x2))
+
+
+
+#-------------------------------------------------------------------------------
+#Eliminar el efecto de x1 en x2
+
+
+fit_x2_x1=lm(x2~x1)
+summary(fit_x2_x1)
+
+#Regresión equación [2]
+
+#PACF
+summary(lm(y~fit_x2_x1$residuals))
+
+plot(x1,x2)
+
+
+#-------------------------------------------------------------------------------
+#Para x1 y x2
+
+#PACF
+summary(lm(y~x1+x2))
+
+#-------------------------------------------------------------------------
+#Estimación AFC
+
+
+acf2(x_t)
+
+#para X -1
+summary(lm(x_t_0~x_t_1))
+
+#para X -2
+
+#Una forma
+summary(lm(x_t_0~x_t_1+x_t_2))
+
+
+fit_x1_x2=lm(x_t_1~x_t_2)
+summary(lm(x_t_0~fit_x1_x2$residuals))
+
+
+#para X -3
+summary(lm(x_t_0~x_t_1+x_t_2+x_t_3))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

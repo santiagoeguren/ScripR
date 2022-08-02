@@ -23,7 +23,7 @@ library(urca)
 #Armar serie x[t]
 ##############################################################################
 
-tita_1=-0.9
+tita_1=1
 tita_2=0
 tita_3=0
 tita_4=0
@@ -94,14 +94,21 @@ summary(fit)
 #-----------------------------------------------------------------------------
 #Estimación regresión lineal para tita_1
 
+
+
 x_t_1=x_t[-1]
 z_t_1=z_t[-length(z_t)]
+
 summary(fit)
+
 summary(lm(x_t_1~z_t_1))
 
 plot(z_t_1,x_t_1,xlab="z_t_1",ylab="x_t_1",col="blue")
+
 cor_x_z_1=cor(x_t_1,z_t_1)
+
 cor_x_z_1
+
 mean(x_t_1)
 var(x_t_1)
 
@@ -202,12 +209,20 @@ length(x_t_10)
 #Xt-1
 
 acf2(x_t)
+
 plot(x_t_1,x_t_0)
 summary(lm(x_t_0~x_t_1))
 
 cor(x_t_0,x_t_1)
 
-0.49217 *(sd(x_t_0)/sd(x_t_1))
+
+#Corr=Beta*(sigmaXt)/(sigmaXt-1)
+
+0.498952  *(sd(x_t_0)/sd(x_t_1))
+
+
+
+
 
 
 
@@ -220,7 +235,9 @@ summary(lm(x_t_0~x_t_2))
 
 cor(x_t_0,x_t_2)
 
-0.003216*(sd(x_t_0)/sd(x_t_2))
+#Corr=Beta*(sigmaXt)/(sigmaXt-1)
+
+0.005928 *(sd(x_t_0)/sd(x_t_2))
 
 
 ###############################################################################
@@ -243,23 +260,23 @@ ARIMA_prediccion
 #T+1
 summary(fit)
 
--0.9032 *z_t[length(z_t)] + 0*z_t[length(z_t)-1]+0*z_t[length(z_t)-2]+ 0 *z_t[length(z_t)-3]+  1.9919
+0.9001 *z_t[length(z_t)] + 0*z_t[length(z_t)-1]+0*z_t[length(z_t)-2]+ 0 *z_t[length(z_t)-3]+  1.9943
 
 
 
 
 #T+2
 
-0.8993*0 + 0*z_t[length(z_t)]+ 0*z_t[length(z_t)-1]+ 0 *z_t[length(z_t)-2] + 1.9919
+0.9001*0 + 0*z_t[length(z_t)]+ 0*z_t[length(z_t)-1]+ 0 *z_t[length(z_t)-2] +1.9943
 
 
 #T+3
 
-0.50637*0 + 0.4974*0+0.5034*z_t[length(z_t)]+ 0.5004 *z_t[length(z_t)-1] + 2.0079
+0.9001*0 + 0*0+0*z_t[length(z_t)]+0 *z_t[length(z_t)-1] + 1.9943
 
 #T+4
 
-0.5063*0 + 0.4974*0+0.5034*0+0.5004 *z_t[length(z_t)] + 2.0079
+0.9001*0 + 0*0+0*0+0 *z_t[length(z_t)] +1.9943
 
 
 #prediccion mediante estimación parametrica
@@ -291,7 +308,7 @@ summary(lm(x_t_0~x_t_1+x_t_2+x_t_3+x_t_4+x_t_5+x_t_6+x_t_7+x_t_8+x_t_9+x_t_10))
 
 summary(fit)
 
-tita_1_estimada=  -0.9032
+tita_1_estimada=   0.9001
 
 sum_a=0
 
@@ -309,7 +326,7 @@ while(i<=200){
 
 summary(fit)
 
-mean_estimada=1.9999
+mean_estimada=1.9943
 
 a_0= mean_estimada*(1-sum_a)
 a_0
@@ -380,20 +397,20 @@ ARIMA_prediccion
 
 x_t[length(z_t)]
 
-z_t_cuasality=x_t[length(z_t)]
+z_t_Invertibility=x_t[length(z_t)]
 
 i=1
 
 while (i<=200) {
   
-  z_t_cuasality=z_t_cuasality+((-1)^i)*(tita_1_estimada^i)*x_t[(length(z_t)-i)]
+  z_t_Invertibility=z_t_Invertibility+((-1)^i)*(tita_1_estimada^i)*x_t[(length(z_t)-i)]
   
   i=i+1
   
 }
 
 
-z_t_cuasality-a_0
+z_t_Invertibility-a_0
 z_t[length(z_t)]
 
 
@@ -409,7 +426,8 @@ z_t[length(z_t)]
 
 
 x2=rnorm(10000,0,1)
-x1=rnorm(10000,0,1)+1*x2
+e1=rnorm(10000,0,1)
+x1=e1-1*x2
 
 y=NULL
 
@@ -424,32 +442,103 @@ while (i<=10000) {
 }
 
 
+#------------------------------------------------------------------------------
+#Nota
+
+# y = 0.5 *x1 + 0.5 *x1
+
+#Si x1=e1+x2, reemplazamos: y=0.5*(e1+x2)+0.5*x2 = 0.5*e1+0.5*x2+0.5*x2
+#y=0.5*e1+1x2 [1]
+
+#Si x2=0.5*x1+e2, reemplazamos: y = 0.5*x1+0.5*(0.5*x1+e2)=0.5*x1+0.25*x1+0.5*e2
+#y=0.75*x1+0.5*e2      [2]
+
+
+
+#Nota: Para ser como MA
+
+
+#------------------------------------------------------------------------------
+#Nota
+
+# y = 0.5 *x1 + 0.5 *x2
+
+#Si x1=e1- x2, reemplazamos: y=0.5*(e1-x2)+0.5*x2 = 0.5*e1-0.5*x2+0.5*x2
+#y=0.5*e1 + 0*x2   [1]
+
+
+#Si x2=-0.5*x1+e2, reemplazamos: y = 0.5*x1+0.5*(-0.5*x1+e2)=0.5*x1-0.25*x1+0.5*e2
+#y=0.25*x1+0.5*e2      [2]
 
 
 #-------------------------------------------------------------------------------
 #Para x1
+#------------------------------------------------------------------------------
 
+#Regresion equación [2]
+
+
+#ACF
 summary(lm(y~x1))
-
-#-------------------------------------------------------------------------------
-#¿Por qué 0.75?. Si x2=1 y x1=1+x2 = 1 +1 ---> y = 0.5*2+0.5*1=1.5 ---> si 
-#partimos de ordenada al origen x1 creción en 2 e y en 1.5, ---> la pendiente
-#1.5/2 = 0.75
 
 
 
 #-------------------------------------------------------------------------------
 #Eliminar el efecto de x2 en x1
 
+
+
+
+
 fit_x1_x2=lm(x1~x2)
 summary(fit_x1_x2)
 
+
+#Regresión equación [1]
+
+#PACF
 summary(lm(y~fit_x1_x2$residuals))
+
+plot(fit_x1_x2$residuals,y)
+
+
+plot(e1,y)
+summary(lm(y~e1))
+
+
+
+
+
+#-------------------------------------------------------------------------------
+#Para x2
+#-------------------------------------------------------------------------------
+
+#Regresión equación [1]
+
+#ACF
+summary(lm(y~x2))
+
+
+
+#-------------------------------------------------------------------------------
+#Eliminar el efecto de x1 en x2
+
+
+fit_x2_x1=lm(x2~x1)
+summary(fit_x2_x1)
+
+#Regresión equación [2]
+
+#PACF
+summary(lm(y~fit_x2_x1$residuals))
+
+plot(x1,x2)
 
 
 #-------------------------------------------------------------------------------
 #Para x1 y x2
 
+#PACF
 summary(lm(y~x1+x2))
 
 
@@ -470,6 +559,14 @@ summary(lm(x_t_0~x_t_1+x_t_2))
 
 fit_x1_x2=lm(x_t_1~x_t_2)
 summary(lm(x_t_0~fit_x1_x2$residuals))
+
+
+
+fit_x2_x1=lm(x_t_2~x_t_1)
+summary(lm(x_t_0~fit_x2_x1$residuals))
+
+
+
 
 
 #para X -3
