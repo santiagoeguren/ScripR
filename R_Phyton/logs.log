@@ -522,3 +522,1003 @@
 2022-08-06 20:07:09,194:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
 2022-08-06 20:07:09,194:INFO:Creating global containers
 2022-08-06 20:07:09,194:INFO:Internal pipeline: Pipeline(memory=None, steps=[('empty_step', 'passthrough')], verbose=False)
+2022-08-07 02:11:59,153:INFO:PyCaret Supervised Module
+2022-08-07 02:11:59,153:INFO:ML Usecase: regression
+2022-08-07 02:11:59,153:INFO:version 2.2.3
+2022-08-07 02:11:59,153:INFO:Initializing setup()
+2022-08-07 02:11:59,153:INFO:setup(target=Price, ml_usecase=regression, available_plots={'parameter': 'Hyperparameters', 'residuals': 'Residuals', 'error': 'Prediction Error', 'cooks': 'Cooks Distance', 'rfe': 'Feature Selection', 'learning': 'Learning Curve', 'manifold': 'Manifold Learning', 'vc': 'Validation Curve', 'feature': 'Feature Importance', 'feature_all': 'Feature Importance (All)', 'tree': 'Decision Tree'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=None, categorical_imputation=constant, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=mean, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=False, normalize_method=zscore, transformation=False, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=False, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=False, multicollinearity_threshold=0.9, remove_perfect_collinearity=True, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=False, feature_selection_threshold=0.8, feature_selection_method=classic, feature_interaction=False, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=False, transform_target_method=box-cox, data_split_shuffle=True, data_split_stratify=False, fold_strategy=kfold, fold=10, fold_shuffle=False, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=None, log_experiment=False, experiment_name=None, log_plots=False, log_profile=False, log_data=False, silent=False, verbose=True, profile=False, profile_kwargs=None, display=None)
+2022-08-07 02:11:59,153:INFO:Checking environment
+2022-08-07 02:11:59,153:INFO:python_version: 3.8.13
+2022-08-07 02:11:59,153:INFO:python_build: ('default', 'Mar 25 2022 06:15:30')
+2022-08-07 02:11:59,153:INFO:machine: x86_64
+2022-08-07 02:11:59,153:INFO:platform: Linux-5.15.0-43-generic-x86_64-with-glibc2.10
+2022-08-07 02:11:59,153:INFO:Memory: svmem(total=24999211008, available=20584742912, percent=17.7, used=3147464704, free=9441738752, active=3151917056, inactive=10527825920, buffers=558202880, cached=11851804672, shared=858349568, slab=867074048)
+2022-08-07 02:11:59,155:INFO:Physical Core: 4
+2022-08-07 02:11:59,155:INFO:Logical Core: 8
+2022-08-07 02:11:59,155:INFO:Checking libraries
+2022-08-07 02:11:59,155:INFO:pd==1.4.3
+2022-08-07 02:11:59,155:INFO:numpy==1.23.1
+2022-08-07 02:11:59,155:INFO:sklearn==1.1.2
+2022-08-07 02:11:59,199:INFO:xgboost==1.5.1
+2022-08-07 02:11:59,200:INFO:lightgbm==3.3.2
+2022-08-07 02:11:59,211:INFO:catboost==1.0.6
+2022-08-07 02:11:59,391:INFO:mlflow==1.26.1
+2022-08-07 02:11:59,391:INFO:Checking Exceptions
+2022-08-07 02:11:59,391:INFO:Declaring global variables
+2022-08-07 02:11:59,391:INFO:USI: 54c0
+2022-08-07 02:11:59,392:INFO:pycaret_globals: {'fix_imbalance_param', 'X_test', 'iterative_imputation_iters_param', '_ml_usecase', 'target_param', 'y_train', 'USI', '_available_plots', 'fold_generator', '_all_models_internal', 'X', 'gpu_param', '_all_metrics', '_gpu_n_jobs_param', 'stratify_param', 'fold_param', 'y', 'create_model_container', 'transform_target_method_param', 'logging_param', 'n_jobs_param', 'seed', 'imputation_regressor', 'display_container', 'log_plots_param', 'imputation_classifier', 'transform_target_param', 'html_param', 'experiment__', 'data_before_preprocess', 'y_test', '_all_models', 'pycaret_globals', 'exp_name_log', '_internal_pipeline', 'fold_groups_param', 'X_train', 'fix_imbalance_method_param', 'master_model_container', 'prep_pipe', 'fold_shuffle_param'}
+2022-08-07 02:11:59,392:INFO:Preparing display monitor
+2022-08-07 02:11:59,392:INFO:Preparing display monitor
+2022-08-07 02:11:59,396:INFO:Importing libraries
+2022-08-07 02:11:59,396:INFO:Copying data for preprocessing
+2022-08-07 02:11:59,397:INFO:Declaring preprocessing parameters
+2022-08-07 02:11:59,398:INFO:Creating preprocessing pipeline
+2022-08-07 02:11:59,399:INFO:Preprocessing pipeline created successfully
+2022-08-07 02:11:59,399:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2022-08-07 02:11:59,399:INFO:Creating global containers
+2022-08-07 02:13:00,367:INFO:PyCaret Supervised Module
+2022-08-07 02:13:00,367:INFO:ML Usecase: regression
+2022-08-07 02:13:00,367:INFO:version 2.2.3
+2022-08-07 02:13:00,367:INFO:Initializing setup()
+2022-08-07 02:13:00,367:INFO:setup(target=Price, ml_usecase=regression, available_plots={'parameter': 'Hyperparameters', 'residuals': 'Residuals', 'error': 'Prediction Error', 'cooks': 'Cooks Distance', 'rfe': 'Feature Selection', 'learning': 'Learning Curve', 'manifold': 'Manifold Learning', 'vc': 'Validation Curve', 'feature': 'Feature Importance', 'feature_all': 'Feature Importance (All)', 'tree': 'Decision Tree'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=None, categorical_imputation=constant, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=mean, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=False, normalize_method=zscore, transformation=False, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=False, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=False, multicollinearity_threshold=0.9, remove_perfect_collinearity=True, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=False, feature_selection_threshold=0.8, feature_selection_method=classic, feature_interaction=False, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=False, transform_target_method=box-cox, data_split_shuffle=True, data_split_stratify=False, fold_strategy=kfold, fold=10, fold_shuffle=False, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=2, log_experiment=False, experiment_name=None, log_plots=False, log_profile=False, log_data=False, silent=False, verbose=True, profile=False, profile_kwargs=None, display=None)
+2022-08-07 02:13:00,368:INFO:Checking environment
+2022-08-07 02:13:00,368:INFO:python_version: 3.8.13
+2022-08-07 02:13:00,368:INFO:python_build: ('default', 'Mar 25 2022 06:15:30')
+2022-08-07 02:13:00,368:INFO:machine: x86_64
+2022-08-07 02:13:00,368:INFO:platform: Linux-5.15.0-43-generic-x86_64-with-glibc2.10
+2022-08-07 02:13:00,368:INFO:Memory: svmem(total=24999211008, available=20562280448, percent=17.7, used=3172020224, free=9418047488, active=3152633856, inactive=10553286656, buffers=558309376, cached=11850833920, shared=856256512, slab=867217408)
+2022-08-07 02:13:00,368:INFO:Physical Core: 4
+2022-08-07 02:13:00,368:INFO:Logical Core: 8
+2022-08-07 02:13:00,369:INFO:Checking libraries
+2022-08-07 02:13:00,369:INFO:pd==1.4.3
+2022-08-07 02:13:00,369:INFO:numpy==1.23.1
+2022-08-07 02:13:00,369:INFO:sklearn==1.1.2
+2022-08-07 02:13:00,369:INFO:xgboost==1.5.1
+2022-08-07 02:13:00,369:INFO:lightgbm==3.3.2
+2022-08-07 02:13:00,369:INFO:catboost==1.0.6
+2022-08-07 02:13:00,369:INFO:mlflow==1.26.1
+2022-08-07 02:13:00,369:INFO:Checking Exceptions
+2022-08-07 02:13:00,369:INFO:Declaring global variables
+2022-08-07 02:13:00,369:INFO:USI: 3d57
+2022-08-07 02:13:00,369:INFO:pycaret_globals: {'fix_imbalance_param', 'X_test', 'iterative_imputation_iters_param', '_ml_usecase', 'target_param', 'y_train', 'USI', '_available_plots', 'fold_generator', '_all_models_internal', 'X', 'gpu_param', '_all_metrics', '_gpu_n_jobs_param', 'stratify_param', 'fold_param', 'y', 'create_model_container', 'transform_target_method_param', 'logging_param', 'n_jobs_param', 'seed', 'imputation_regressor', 'display_container', 'log_plots_param', 'imputation_classifier', 'transform_target_param', 'html_param', 'experiment__', 'data_before_preprocess', 'y_test', '_all_models', 'pycaret_globals', 'exp_name_log', '_internal_pipeline', 'fold_groups_param', 'X_train', 'fix_imbalance_method_param', 'master_model_container', 'prep_pipe', 'fold_shuffle_param'}
+2022-08-07 02:13:00,369:INFO:Preparing display monitor
+2022-08-07 02:13:00,369:INFO:Preparing display monitor
+2022-08-07 02:13:00,375:INFO:Importing libraries
+2022-08-07 02:13:00,375:INFO:Copying data for preprocessing
+2022-08-07 02:13:00,377:INFO:Declaring preprocessing parameters
+2022-08-07 02:13:00,378:INFO:Creating preprocessing pipeline
+2022-08-07 02:13:00,379:INFO:Preprocessing pipeline created successfully
+2022-08-07 02:13:00,379:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2022-08-07 02:13:00,379:INFO:Creating global containers
+2022-08-07 02:13:25,722:INFO:PyCaret Supervised Module
+2022-08-07 02:13:25,722:INFO:ML Usecase: regression
+2022-08-07 02:13:25,722:INFO:version 2.2.3
+2022-08-07 02:13:25,722:INFO:Initializing setup()
+2022-08-07 02:13:25,722:INFO:setup(target=Price, ml_usecase=regression, available_plots={'parameter': 'Hyperparameters', 'residuals': 'Residuals', 'error': 'Prediction Error', 'cooks': 'Cooks Distance', 'rfe': 'Feature Selection', 'learning': 'Learning Curve', 'manifold': 'Manifold Learning', 'vc': 'Validation Curve', 'feature': 'Feature Importance', 'feature_all': 'Feature Importance (All)', 'tree': 'Decision Tree'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=None, categorical_imputation=constant, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=mean, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=False, normalize_method=zscore, transformation=False, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=False, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=False, multicollinearity_threshold=0.9, remove_perfect_collinearity=True, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=False, feature_selection_threshold=0.8, feature_selection_method=classic, feature_interaction=False, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=False, transform_target_method=box-cox, data_split_shuffle=True, data_split_stratify=False, fold_strategy=kfold, fold=10, fold_shuffle=False, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=2, log_experiment=False, experiment_name=None, log_plots=False, log_profile=False, log_data=False, silent=False, verbose=True, profile=False, profile_kwargs=None, display=None)
+2022-08-07 02:13:25,722:INFO:Checking environment
+2022-08-07 02:13:25,722:INFO:python_version: 3.8.13
+2022-08-07 02:13:25,722:INFO:python_build: ('default', 'Mar 25 2022 06:15:30')
+2022-08-07 02:13:25,722:INFO:machine: x86_64
+2022-08-07 02:13:25,722:INFO:platform: Linux-5.15.0-43-generic-x86_64-with-glibc2.10
+2022-08-07 02:13:25,723:INFO:Memory: svmem(total=24999211008, available=20558413824, percent=17.8, used=3174936576, free=9413165056, active=3152674816, inactive=10560753664, buffers=558346240, cached=11852763136, shared=857206784, slab=867217408)
+2022-08-07 02:13:25,723:INFO:Physical Core: 4
+2022-08-07 02:13:25,723:INFO:Logical Core: 8
+2022-08-07 02:13:25,724:INFO:Checking libraries
+2022-08-07 02:13:25,724:INFO:pd==1.4.3
+2022-08-07 02:13:25,724:INFO:numpy==1.23.1
+2022-08-07 02:13:25,724:INFO:sklearn==1.1.2
+2022-08-07 02:13:25,724:INFO:xgboost==1.5.1
+2022-08-07 02:13:25,724:INFO:lightgbm==3.3.2
+2022-08-07 02:13:25,724:INFO:catboost==1.0.6
+2022-08-07 02:13:25,724:INFO:mlflow==1.26.1
+2022-08-07 02:13:25,724:INFO:Checking Exceptions
+2022-08-07 02:13:25,724:INFO:Declaring global variables
+2022-08-07 02:13:25,725:INFO:USI: b859
+2022-08-07 02:13:25,725:INFO:pycaret_globals: {'fix_imbalance_param', 'X_test', 'iterative_imputation_iters_param', '_ml_usecase', 'target_param', 'y_train', 'USI', '_available_plots', 'fold_generator', '_all_models_internal', 'X', 'gpu_param', '_all_metrics', '_gpu_n_jobs_param', 'stratify_param', 'fold_param', 'y', 'create_model_container', 'transform_target_method_param', 'logging_param', 'n_jobs_param', 'seed', 'imputation_regressor', 'display_container', 'log_plots_param', 'imputation_classifier', 'transform_target_param', 'html_param', 'experiment__', 'data_before_preprocess', 'y_test', '_all_models', 'pycaret_globals', 'exp_name_log', '_internal_pipeline', 'fold_groups_param', 'X_train', 'fix_imbalance_method_param', 'master_model_container', 'prep_pipe', 'fold_shuffle_param'}
+2022-08-07 02:13:25,725:INFO:Preparing display monitor
+2022-08-07 02:13:25,725:INFO:Preparing display monitor
+2022-08-07 02:13:25,732:INFO:Importing libraries
+2022-08-07 02:13:25,732:INFO:Copying data for preprocessing
+2022-08-07 02:13:25,734:INFO:Declaring preprocessing parameters
+2022-08-07 02:13:25,735:INFO:Creating preprocessing pipeline
+2022-08-07 02:13:25,742:INFO:Preprocessing pipeline created successfully
+2022-08-07 02:13:25,742:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2022-08-07 02:13:25,742:INFO:Creating global containers
+2022-08-07 02:13:55,757:INFO:PyCaret Supervised Module
+2022-08-07 02:13:55,757:INFO:ML Usecase: regression
+2022-08-07 02:13:55,757:INFO:version 2.2.3
+2022-08-07 02:13:55,757:INFO:Initializing setup()
+2022-08-07 02:13:55,757:INFO:setup(target=Price, ml_usecase=regression, available_plots={'parameter': 'Hyperparameters', 'residuals': 'Residuals', 'error': 'Prediction Error', 'cooks': 'Cooks Distance', 'rfe': 'Feature Selection', 'learning': 'Learning Curve', 'manifold': 'Manifold Learning', 'vc': 'Validation Curve', 'feature': 'Feature Importance', 'feature_all': 'Feature Importance (All)', 'tree': 'Decision Tree'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=None, categorical_imputation=constant, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=mean, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=False, normalize_method=zscore, transformation=False, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=False, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=False, multicollinearity_threshold=0.9, remove_perfect_collinearity=True, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=False, feature_selection_threshold=0.8, feature_selection_method=classic, feature_interaction=False, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=False, transform_target_method=box-cox, data_split_shuffle=True, data_split_stratify=False, fold_strategy=kfold, fold=10, fold_shuffle=False, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=2, log_experiment=False, experiment_name=None, log_plots=False, log_profile=False, log_data=False, silent=False, verbose=True, profile=False, profile_kwargs=None, display=None)
+2022-08-07 02:13:55,757:INFO:Checking environment
+2022-08-07 02:13:55,757:INFO:python_version: 3.8.13
+2022-08-07 02:13:55,757:INFO:python_build: ('default', 'Mar 25 2022 06:15:30')
+2022-08-07 02:13:55,757:INFO:machine: x86_64
+2022-08-07 02:13:55,757:INFO:platform: Linux-5.15.0-43-generic-x86_64-with-glibc2.10
+2022-08-07 02:13:55,758:INFO:Memory: svmem(total=24999211008, available=20542513152, percent=17.8, used=3181830144, free=9398018048, active=3152777216, inactive=10573860864, buffers=558419968, cached=11860942848, shared=866213888, slab=867205120)
+2022-08-07 02:13:55,758:INFO:Physical Core: 4
+2022-08-07 02:13:55,758:INFO:Logical Core: 8
+2022-08-07 02:13:55,758:INFO:Checking libraries
+2022-08-07 02:13:55,758:INFO:pd==1.4.3
+2022-08-07 02:13:55,758:INFO:numpy==1.23.1
+2022-08-07 02:13:55,758:INFO:sklearn==1.1.2
+2022-08-07 02:13:55,758:INFO:xgboost==1.5.1
+2022-08-07 02:13:55,758:INFO:lightgbm==3.3.2
+2022-08-07 02:13:55,758:INFO:catboost==1.0.6
+2022-08-07 02:13:55,758:INFO:mlflow==1.26.1
+2022-08-07 02:13:55,758:INFO:Checking Exceptions
+2022-08-07 02:13:55,759:INFO:Declaring global variables
+2022-08-07 02:13:55,759:INFO:USI: 9f08
+2022-08-07 02:13:55,759:INFO:pycaret_globals: {'fix_imbalance_param', 'X_test', 'iterative_imputation_iters_param', '_ml_usecase', 'target_param', 'y_train', 'USI', '_available_plots', 'fold_generator', '_all_models_internal', 'X', 'gpu_param', '_all_metrics', '_gpu_n_jobs_param', 'stratify_param', 'fold_param', 'y', 'create_model_container', 'transform_target_method_param', 'logging_param', 'n_jobs_param', 'seed', 'imputation_regressor', 'display_container', 'log_plots_param', 'imputation_classifier', 'transform_target_param', 'html_param', 'experiment__', 'data_before_preprocess', 'y_test', '_all_models', 'pycaret_globals', 'exp_name_log', '_internal_pipeline', 'fold_groups_param', 'X_train', 'fix_imbalance_method_param', 'master_model_container', 'prep_pipe', 'fold_shuffle_param'}
+2022-08-07 02:13:55,759:INFO:Preparing display monitor
+2022-08-07 02:13:55,759:INFO:Preparing display monitor
+2022-08-07 02:13:55,764:INFO:Importing libraries
+2022-08-07 02:13:55,764:INFO:Copying data for preprocessing
+2022-08-07 02:13:55,766:INFO:Declaring preprocessing parameters
+2022-08-07 02:13:55,767:INFO:Creating preprocessing pipeline
+2022-08-07 02:13:55,771:INFO:Preprocessing pipeline created successfully
+2022-08-07 02:13:55,771:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2022-08-07 02:13:55,772:INFO:Creating global containers
+2022-08-07 02:17:38,922:INFO:PyCaret Supervised Module
+2022-08-07 02:17:38,922:INFO:ML Usecase: regression
+2022-08-07 02:17:38,922:INFO:version 2.2.3
+2022-08-07 02:17:38,922:INFO:Initializing setup()
+2022-08-07 02:17:38,922:INFO:setup(target=Price, ml_usecase=regression, available_plots={'parameter': 'Hyperparameters', 'residuals': 'Residuals', 'error': 'Prediction Error', 'cooks': 'Cooks Distance', 'rfe': 'Feature Selection', 'learning': 'Learning Curve', 'manifold': 'Manifold Learning', 'vc': 'Validation Curve', 'feature': 'Feature Importance', 'feature_all': 'Feature Importance (All)', 'tree': 'Decision Tree'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=None, categorical_imputation=constant, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=mean, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=False, normalize_method=zscore, transformation=False, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=False, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=False, multicollinearity_threshold=0.9, remove_perfect_collinearity=True, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=False, feature_selection_threshold=0.8, feature_selection_method=classic, feature_interaction=False, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=False, transform_target_method=box-cox, data_split_shuffle=True, data_split_stratify=False, fold_strategy=kfold, fold=10, fold_shuffle=False, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=2, log_experiment=False, experiment_name=None, log_plots=False, log_profile=False, log_data=False, silent=False, verbose=True, profile=False, profile_kwargs=None, display=None)
+2022-08-07 02:17:38,922:INFO:Checking environment
+2022-08-07 02:17:38,922:INFO:python_version: 3.8.13
+2022-08-07 02:17:38,922:INFO:python_build: ('default', 'Mar 25 2022 06:15:30')
+2022-08-07 02:17:38,922:INFO:machine: x86_64
+2022-08-07 02:17:38,922:INFO:platform: Linux-5.15.0-43-generic-x86_64-with-glibc2.10
+2022-08-07 02:17:38,922:INFO:Memory: svmem(total=24999211008, available=20340002816, percent=18.6, used=3359006720, free=9191510016, active=3156713472, inactive=10719580160, buffers=559517696, cached=11889176576, shared=891547648, slab=868868096)
+2022-08-07 02:17:38,922:INFO:Physical Core: 4
+2022-08-07 02:17:38,922:INFO:Logical Core: 8
+2022-08-07 02:17:38,922:INFO:Checking libraries
+2022-08-07 02:17:38,922:INFO:pd==1.4.3
+2022-08-07 02:17:38,922:INFO:numpy==1.23.1
+2022-08-07 02:17:38,922:INFO:sklearn==1.1.2
+2022-08-07 02:17:38,922:INFO:xgboost==1.5.1
+2022-08-07 02:17:38,922:INFO:lightgbm==3.3.2
+2022-08-07 02:17:38,922:INFO:catboost==1.0.6
+2022-08-07 02:17:38,922:INFO:mlflow==1.26.1
+2022-08-07 02:17:38,922:INFO:Checking Exceptions
+2022-08-07 02:17:38,922:INFO:Declaring global variables
+2022-08-07 02:17:38,923:INFO:USI: 4a30
+2022-08-07 02:17:38,923:INFO:pycaret_globals: {'fix_imbalance_param', 'X_test', 'iterative_imputation_iters_param', '_ml_usecase', 'target_param', 'y_train', 'USI', '_available_plots', 'fold_generator', '_all_models_internal', 'X', 'gpu_param', '_all_metrics', '_gpu_n_jobs_param', 'stratify_param', 'fold_param', 'y', 'create_model_container', 'transform_target_method_param', 'logging_param', 'n_jobs_param', 'seed', 'imputation_regressor', 'display_container', 'log_plots_param', 'imputation_classifier', 'transform_target_param', 'html_param', 'experiment__', 'data_before_preprocess', 'y_test', '_all_models', 'pycaret_globals', 'exp_name_log', '_internal_pipeline', 'fold_groups_param', 'X_train', 'fix_imbalance_method_param', 'master_model_container', 'prep_pipe', 'fold_shuffle_param'}
+2022-08-07 02:17:38,923:INFO:Preparing display monitor
+2022-08-07 02:17:38,923:INFO:Preparing display monitor
+2022-08-07 02:17:38,927:INFO:Importing libraries
+2022-08-07 02:17:38,927:INFO:Copying data for preprocessing
+2022-08-07 02:17:38,929:INFO:Declaring preprocessing parameters
+2022-08-07 02:17:38,929:INFO:Creating preprocessing pipeline
+2022-08-07 02:17:38,931:INFO:Preprocessing pipeline created successfully
+2022-08-07 02:17:38,931:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2022-08-07 02:17:38,931:INFO:Creating global containers
+2022-08-07 02:17:53,872:INFO:PyCaret Supervised Module
+2022-08-07 02:17:53,873:INFO:ML Usecase: regression
+2022-08-07 02:17:53,873:INFO:version 2.2.3
+2022-08-07 02:17:53,873:INFO:Initializing setup()
+2022-08-07 02:17:53,873:INFO:setup(target=Price, ml_usecase=regression, available_plots={'parameter': 'Hyperparameters', 'residuals': 'Residuals', 'error': 'Prediction Error', 'cooks': 'Cooks Distance', 'rfe': 'Feature Selection', 'learning': 'Learning Curve', 'manifold': 'Manifold Learning', 'vc': 'Validation Curve', 'feature': 'Feature Importance', 'feature_all': 'Feature Importance (All)', 'tree': 'Decision Tree'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=None, categorical_imputation=constant, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=mean, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=False, normalize_method=zscore, transformation=False, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=False, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=False, multicollinearity_threshold=0.9, remove_perfect_collinearity=True, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=False, feature_selection_threshold=0.8, feature_selection_method=classic, feature_interaction=False, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=False, transform_target_method=box-cox, data_split_shuffle=True, data_split_stratify=False, fold_strategy=kfold, fold=10, fold_shuffle=False, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=5, log_experiment=False, experiment_name=None, log_plots=False, log_profile=False, log_data=False, silent=False, verbose=True, profile=False, profile_kwargs=None, display=None)
+2022-08-07 02:17:53,873:INFO:Checking environment
+2022-08-07 02:17:53,873:INFO:python_version: 3.8.13
+2022-08-07 02:17:53,873:INFO:python_build: ('default', 'Mar 25 2022 06:15:30')
+2022-08-07 02:17:53,873:INFO:machine: x86_64
+2022-08-07 02:17:53,873:INFO:platform: Linux-5.15.0-43-generic-x86_64-with-glibc2.10
+2022-08-07 02:17:53,873:INFO:Memory: svmem(total=24999211008, available=20350730240, percent=18.6, used=3350142976, free=9201610752, active=3156856832, inactive=10711203840, buffers=559616000, cached=11887841280, shared=889683968, slab=869298176)
+2022-08-07 02:17:53,874:INFO:Physical Core: 4
+2022-08-07 02:17:53,874:INFO:Logical Core: 8
+2022-08-07 02:17:53,874:INFO:Checking libraries
+2022-08-07 02:17:53,874:INFO:pd==1.4.3
+2022-08-07 02:17:53,874:INFO:numpy==1.23.1
+2022-08-07 02:17:53,874:INFO:sklearn==1.1.2
+2022-08-07 02:17:53,874:INFO:xgboost==1.5.1
+2022-08-07 02:17:53,874:INFO:lightgbm==3.3.2
+2022-08-07 02:17:53,874:INFO:catboost==1.0.6
+2022-08-07 02:17:53,874:INFO:mlflow==1.26.1
+2022-08-07 02:17:53,874:INFO:Checking Exceptions
+2022-08-07 02:17:53,874:INFO:Declaring global variables
+2022-08-07 02:17:53,874:INFO:USI: 0bc9
+2022-08-07 02:17:53,874:INFO:pycaret_globals: {'fix_imbalance_param', 'X_test', 'iterative_imputation_iters_param', '_ml_usecase', 'target_param', 'y_train', 'USI', '_available_plots', 'fold_generator', '_all_models_internal', 'X', 'gpu_param', '_all_metrics', '_gpu_n_jobs_param', 'stratify_param', 'fold_param', 'y', 'create_model_container', 'transform_target_method_param', 'logging_param', 'n_jobs_param', 'seed', 'imputation_regressor', 'display_container', 'log_plots_param', 'imputation_classifier', 'transform_target_param', 'html_param', 'experiment__', 'data_before_preprocess', 'y_test', '_all_models', 'pycaret_globals', 'exp_name_log', '_internal_pipeline', 'fold_groups_param', 'X_train', 'fix_imbalance_method_param', 'master_model_container', 'prep_pipe', 'fold_shuffle_param'}
+2022-08-07 02:17:53,874:INFO:Preparing display monitor
+2022-08-07 02:17:53,874:INFO:Preparing display monitor
+2022-08-07 02:17:53,880:INFO:Importing libraries
+2022-08-07 02:17:53,880:INFO:Copying data for preprocessing
+2022-08-07 02:17:53,881:INFO:Declaring preprocessing parameters
+2022-08-07 02:17:53,881:INFO:Creating preprocessing pipeline
+2022-08-07 02:17:53,883:INFO:Preprocessing pipeline created successfully
+2022-08-07 02:17:53,883:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2022-08-07 02:17:53,883:INFO:Creating global containers
+2022-08-07 02:18:02,399:INFO:PyCaret Supervised Module
+2022-08-07 02:18:02,399:INFO:ML Usecase: regression
+2022-08-07 02:18:02,399:INFO:version 2.2.3
+2022-08-07 02:18:02,399:INFO:Initializing setup()
+2022-08-07 02:18:02,399:INFO:setup(target=Price, ml_usecase=regression, available_plots={'parameter': 'Hyperparameters', 'residuals': 'Residuals', 'error': 'Prediction Error', 'cooks': 'Cooks Distance', 'rfe': 'Feature Selection', 'learning': 'Learning Curve', 'manifold': 'Manifold Learning', 'vc': 'Validation Curve', 'feature': 'Feature Importance', 'feature_all': 'Feature Importance (All)', 'tree': 'Decision Tree'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=None, categorical_imputation=constant, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=mean, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=False, normalize_method=zscore, transformation=False, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=False, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=False, multicollinearity_threshold=0.9, remove_perfect_collinearity=True, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=False, feature_selection_threshold=0.8, feature_selection_method=classic, feature_interaction=False, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=False, transform_target_method=box-cox, data_split_shuffle=True, data_split_stratify=False, fold_strategy=kfold, fold=10, fold_shuffle=False, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=5, log_experiment=False, experiment_name=None, log_plots=False, log_profile=False, log_data=False, silent=False, verbose=True, profile=False, profile_kwargs=None, display=None)
+2022-08-07 02:18:02,399:INFO:Checking environment
+2022-08-07 02:18:02,399:INFO:python_version: 3.8.13
+2022-08-07 02:18:02,399:INFO:python_build: ('default', 'Mar 25 2022 06:15:30')
+2022-08-07 02:18:02,399:INFO:machine: x86_64
+2022-08-07 02:18:02,399:INFO:platform: Linux-5.15.0-43-generic-x86_64-with-glibc2.10
+2022-08-07 02:18:02,399:INFO:Memory: svmem(total=24999211008, available=20343857152, percent=18.6, used=3356602368, free=9194692608, active=3156877312, inactive=10715422720, buffers=559632384, cached=11888283648, shared=890097664, slab=869298176)
+2022-08-07 02:18:02,400:INFO:Physical Core: 4
+2022-08-07 02:18:02,400:INFO:Logical Core: 8
+2022-08-07 02:18:02,400:INFO:Checking libraries
+2022-08-07 02:18:02,400:INFO:pd==1.4.3
+2022-08-07 02:18:02,400:INFO:numpy==1.23.1
+2022-08-07 02:18:02,400:INFO:sklearn==1.1.2
+2022-08-07 02:18:02,400:INFO:xgboost==1.5.1
+2022-08-07 02:18:02,400:INFO:lightgbm==3.3.2
+2022-08-07 02:18:02,400:INFO:catboost==1.0.6
+2022-08-07 02:18:02,400:INFO:mlflow==1.26.1
+2022-08-07 02:18:02,400:INFO:Checking Exceptions
+2022-08-07 02:18:02,400:INFO:Declaring global variables
+2022-08-07 02:18:02,400:INFO:USI: 8bdc
+2022-08-07 02:18:02,400:INFO:pycaret_globals: {'fix_imbalance_param', 'X_test', 'iterative_imputation_iters_param', '_ml_usecase', 'target_param', 'y_train', 'USI', '_available_plots', 'fold_generator', '_all_models_internal', 'X', 'gpu_param', '_all_metrics', '_gpu_n_jobs_param', 'stratify_param', 'fold_param', 'y', 'create_model_container', 'transform_target_method_param', 'logging_param', 'n_jobs_param', 'seed', 'imputation_regressor', 'display_container', 'log_plots_param', 'imputation_classifier', 'transform_target_param', 'html_param', 'experiment__', 'data_before_preprocess', 'y_test', '_all_models', 'pycaret_globals', 'exp_name_log', '_internal_pipeline', 'fold_groups_param', 'X_train', 'fix_imbalance_method_param', 'master_model_container', 'prep_pipe', 'fold_shuffle_param'}
+2022-08-07 02:18:02,400:INFO:Preparing display monitor
+2022-08-07 02:18:02,400:INFO:Preparing display monitor
+2022-08-07 02:18:02,406:INFO:Importing libraries
+2022-08-07 02:18:02,406:INFO:Copying data for preprocessing
+2022-08-07 02:18:02,408:INFO:Declaring preprocessing parameters
+2022-08-07 02:18:02,408:INFO:Creating preprocessing pipeline
+2022-08-07 02:18:02,414:INFO:Preprocessing pipeline created successfully
+2022-08-07 02:18:02,414:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2022-08-07 02:18:02,414:INFO:Creating global containers
+2022-08-07 02:19:57,521:INFO:PyCaret Supervised Module
+2022-08-07 02:19:57,521:INFO:ML Usecase: regression
+2022-08-07 02:19:57,521:INFO:version 2.2.3
+2022-08-07 02:19:57,521:INFO:Initializing setup()
+2022-08-07 02:19:57,521:INFO:setup(target=Survived, ml_usecase=regression, available_plots={'parameter': 'Hyperparameters', 'residuals': 'Residuals', 'error': 'Prediction Error', 'cooks': 'Cooks Distance', 'rfe': 'Feature Selection', 'learning': 'Learning Curve', 'manifold': 'Manifold Learning', 'vc': 'Validation Curve', 'feature': 'Feature Importance', 'feature_all': 'Feature Importance (All)', 'tree': 'Decision Tree'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=None, categorical_imputation=constant, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=mean, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=False, normalize_method=zscore, transformation=False, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=False, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=False, multicollinearity_threshold=0.9, remove_perfect_collinearity=True, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=False, feature_selection_threshold=0.8, feature_selection_method=classic, feature_interaction=False, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=False, transform_target_method=box-cox, data_split_shuffle=True, data_split_stratify=False, fold_strategy=kfold, fold=10, fold_shuffle=True, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=2, log_experiment=False, experiment_name=None, log_plots=False, log_profile=False, log_data=False, silent=False, verbose=True, profile=False, profile_kwargs=None, display=None)
+2022-08-07 02:19:57,521:INFO:Checking environment
+2022-08-07 02:19:57,521:INFO:python_version: 3.8.13
+2022-08-07 02:19:57,521:INFO:python_build: ('default', 'Mar 25 2022 06:15:30')
+2022-08-07 02:19:57,521:INFO:machine: x86_64
+2022-08-07 02:19:57,522:INFO:platform: Linux-5.15.0-43-generic-x86_64-with-glibc2.10
+2022-08-07 02:19:57,522:INFO:Memory: svmem(total=24999211008, available=20241469440, percent=19.0, used=3422666752, free=9090015232, active=3159773184, inactive=10790428672, buffers=560398336, cached=11926130688, shared=926420992, slab=870682624)
+2022-08-07 02:19:57,522:INFO:Physical Core: 4
+2022-08-07 02:19:57,522:INFO:Logical Core: 8
+2022-08-07 02:19:57,522:INFO:Checking libraries
+2022-08-07 02:19:57,523:INFO:pd==1.4.3
+2022-08-07 02:19:57,523:INFO:numpy==1.23.1
+2022-08-07 02:19:57,523:INFO:sklearn==1.1.2
+2022-08-07 02:19:57,523:INFO:xgboost==1.5.1
+2022-08-07 02:19:57,523:INFO:lightgbm==3.3.2
+2022-08-07 02:19:57,523:INFO:catboost==1.0.6
+2022-08-07 02:19:57,523:INFO:mlflow==1.26.1
+2022-08-07 02:19:57,523:INFO:Checking Exceptions
+2022-08-07 02:20:11,512:INFO:PyCaret Supervised Module
+2022-08-07 02:20:11,513:INFO:ML Usecase: regression
+2022-08-07 02:20:11,513:INFO:version 2.2.3
+2022-08-07 02:20:11,513:INFO:Initializing setup()
+2022-08-07 02:20:11,513:INFO:setup(target=Survived, ml_usecase=regression, available_plots={'parameter': 'Hyperparameters', 'residuals': 'Residuals', 'error': 'Prediction Error', 'cooks': 'Cooks Distance', 'rfe': 'Feature Selection', 'learning': 'Learning Curve', 'manifold': 'Manifold Learning', 'vc': 'Validation Curve', 'feature': 'Feature Importance', 'feature_all': 'Feature Importance (All)', 'tree': 'Decision Tree'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=None, categorical_imputation=constant, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=mean, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=False, normalize_method=zscore, transformation=False, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=False, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=False, multicollinearity_threshold=0.9, remove_perfect_collinearity=True, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=False, feature_selection_threshold=0.8, feature_selection_method=classic, feature_interaction=False, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=False, transform_target_method=box-cox, data_split_shuffle=True, data_split_stratify=False, fold_strategy=kfold, fold=10, fold_shuffle=True, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=None, log_experiment=False, experiment_name=None, log_plots=False, log_profile=False, log_data=False, silent=False, verbose=True, profile=False, profile_kwargs=None, display=None)
+2022-08-07 02:20:11,513:INFO:Checking environment
+2022-08-07 02:20:11,513:INFO:python_version: 3.8.13
+2022-08-07 02:20:11,513:INFO:python_build: ('default', 'Mar 25 2022 06:15:30')
+2022-08-07 02:20:11,513:INFO:machine: x86_64
+2022-08-07 02:20:11,513:INFO:platform: Linux-5.15.0-43-generic-x86_64-with-glibc2.10
+2022-08-07 02:20:11,513:INFO:Memory: svmem(total=24999211008, available=20243218432, percent=19.0, used=3422666752, free=9091751936, active=3159781376, inactive=10793472000, buffers=560406528, cached=11924385792, shared=924672000, slab=870682624)
+2022-08-07 02:20:11,514:INFO:Physical Core: 4
+2022-08-07 02:20:11,514:INFO:Logical Core: 8
+2022-08-07 02:20:11,514:INFO:Checking libraries
+2022-08-07 02:20:11,514:INFO:pd==1.4.3
+2022-08-07 02:20:11,514:INFO:numpy==1.23.1
+2022-08-07 02:20:11,514:INFO:sklearn==1.1.2
+2022-08-07 02:20:11,514:INFO:xgboost==1.5.1
+2022-08-07 02:20:11,514:INFO:lightgbm==3.3.2
+2022-08-07 02:20:11,514:INFO:catboost==1.0.6
+2022-08-07 02:20:11,515:INFO:mlflow==1.26.1
+2022-08-07 02:20:11,515:INFO:Checking Exceptions
+2022-08-07 02:20:35,461:INFO:PyCaret Supervised Module
+2022-08-07 02:20:35,461:INFO:ML Usecase: regression
+2022-08-07 02:20:35,461:INFO:version 2.2.3
+2022-08-07 02:20:35,461:INFO:Initializing setup()
+2022-08-07 02:20:35,462:INFO:setup(target=Survived, ml_usecase=regression, available_plots={'parameter': 'Hyperparameters', 'residuals': 'Residuals', 'error': 'Prediction Error', 'cooks': 'Cooks Distance', 'rfe': 'Feature Selection', 'learning': 'Learning Curve', 'manifold': 'Manifold Learning', 'vc': 'Validation Curve', 'feature': 'Feature Importance', 'feature_all': 'Feature Importance (All)', 'tree': 'Decision Tree'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=None, categorical_imputation=constant, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=mean, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=False, normalize_method=zscore, transformation=False, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=False, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=False, multicollinearity_threshold=0.9, remove_perfect_collinearity=True, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=False, feature_selection_threshold=0.8, feature_selection_method=classic, feature_interaction=False, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=False, transform_target_method=box-cox, data_split_shuffle=True, data_split_stratify=False, fold_strategy=kfold, fold=10, fold_shuffle=True, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=123, log_experiment=False, experiment_name=None, log_plots=False, log_profile=False, log_data=False, silent=False, verbose=True, profile=False, profile_kwargs=None, display=None)
+2022-08-07 02:20:35,462:INFO:Checking environment
+2022-08-07 02:20:35,462:INFO:python_version: 3.8.13
+2022-08-07 02:20:35,462:INFO:python_build: ('default', 'Mar 25 2022 06:15:30')
+2022-08-07 02:20:35,462:INFO:machine: x86_64
+2022-08-07 02:20:35,462:INFO:platform: Linux-5.15.0-43-generic-x86_64-with-glibc2.10
+2022-08-07 02:20:35,462:INFO:Memory: svmem(total=24999211008, available=20253708288, percent=19.0, used=3414433792, free=9102843904, active=3159805952, inactive=10786062336, buffers=560435200, cached=11921498112, shared=922415104, slab=870658048)
+2022-08-07 02:20:35,462:INFO:Physical Core: 4
+2022-08-07 02:20:35,462:INFO:Logical Core: 8
+2022-08-07 02:20:35,462:INFO:Checking libraries
+2022-08-07 02:20:35,462:INFO:pd==1.4.3
+2022-08-07 02:20:35,462:INFO:numpy==1.23.1
+2022-08-07 02:20:35,462:INFO:sklearn==1.1.2
+2022-08-07 02:20:35,462:INFO:xgboost==1.5.1
+2022-08-07 02:20:35,463:INFO:lightgbm==3.3.2
+2022-08-07 02:20:35,463:INFO:catboost==1.0.6
+2022-08-07 02:20:35,463:INFO:mlflow==1.26.1
+2022-08-07 02:20:35,463:INFO:Checking Exceptions
+2022-08-07 02:20:56,863:INFO:PyCaret Supervised Module
+2022-08-07 02:20:56,863:INFO:ML Usecase: regression
+2022-08-07 02:20:56,863:INFO:version 2.2.3
+2022-08-07 02:20:56,863:INFO:Initializing setup()
+2022-08-07 02:20:56,863:INFO:setup(target=LIMIT_BAL, ml_usecase=regression, available_plots={'parameter': 'Hyperparameters', 'residuals': 'Residuals', 'error': 'Prediction Error', 'cooks': 'Cooks Distance', 'rfe': 'Feature Selection', 'learning': 'Learning Curve', 'manifold': 'Manifold Learning', 'vc': 'Validation Curve', 'feature': 'Feature Importance', 'feature_all': 'Feature Importance (All)', 'tree': 'Decision Tree'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=None, categorical_imputation=constant, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=mean, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=False, normalize_method=zscore, transformation=False, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=False, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=False, multicollinearity_threshold=0.9, remove_perfect_collinearity=True, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=False, feature_selection_threshold=0.8, feature_selection_method=classic, feature_interaction=False, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=False, transform_target_method=box-cox, data_split_shuffle=True, data_split_stratify=False, fold_strategy=kfold, fold=10, fold_shuffle=True, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=123, log_experiment=False, experiment_name=None, log_plots=False, log_profile=False, log_data=False, silent=False, verbose=True, profile=False, profile_kwargs=None, display=None)
+2022-08-07 02:20:56,863:INFO:Checking environment
+2022-08-07 02:20:56,863:INFO:python_version: 3.8.13
+2022-08-07 02:20:56,863:INFO:python_build: ('default', 'Mar 25 2022 06:15:30')
+2022-08-07 02:20:56,863:INFO:machine: x86_64
+2022-08-07 02:20:56,864:INFO:platform: Linux-5.15.0-43-generic-x86_64-with-glibc2.10
+2022-08-07 02:20:56,864:INFO:Memory: svmem(total=24999211008, available=20258451456, percent=19.0, used=3409752064, free=9107931136, active=3159826432, inactive=10792783872, buffers=560451584, cached=11921076224, shared=922353664, slab=870653952)
+2022-08-07 02:20:56,864:INFO:Physical Core: 4
+2022-08-07 02:20:56,864:INFO:Logical Core: 8
+2022-08-07 02:20:56,864:INFO:Checking libraries
+2022-08-07 02:20:56,864:INFO:pd==1.4.3
+2022-08-07 02:20:56,864:INFO:numpy==1.23.1
+2022-08-07 02:20:56,864:INFO:sklearn==1.1.2
+2022-08-07 02:20:56,864:INFO:xgboost==1.5.1
+2022-08-07 02:20:56,865:INFO:lightgbm==3.3.2
+2022-08-07 02:20:56,865:INFO:catboost==1.0.6
+2022-08-07 02:20:56,865:INFO:mlflow==1.26.1
+2022-08-07 02:20:56,865:INFO:Checking Exceptions
+2022-08-07 02:20:56,865:INFO:Declaring global variables
+2022-08-07 02:20:56,865:INFO:USI: ca85
+2022-08-07 02:20:56,865:INFO:pycaret_globals: {'fix_imbalance_param', 'X_test', 'iterative_imputation_iters_param', '_ml_usecase', 'target_param', 'y_train', 'USI', '_available_plots', 'fold_generator', '_all_models_internal', 'X', 'gpu_param', '_all_metrics', '_gpu_n_jobs_param', 'stratify_param', 'fold_param', 'y', 'create_model_container', 'transform_target_method_param', 'logging_param', 'n_jobs_param', 'seed', 'imputation_regressor', 'display_container', 'log_plots_param', 'imputation_classifier', 'transform_target_param', 'html_param', 'experiment__', 'data_before_preprocess', 'y_test', '_all_models', 'pycaret_globals', 'exp_name_log', '_internal_pipeline', 'fold_groups_param', 'X_train', 'fix_imbalance_method_param', 'master_model_container', 'prep_pipe', 'fold_shuffle_param'}
+2022-08-07 02:20:56,865:INFO:Preparing display monitor
+2022-08-07 02:20:56,865:INFO:Preparing display monitor
+2022-08-07 02:20:56,872:INFO:Importing libraries
+2022-08-07 02:20:56,872:INFO:Copying data for preprocessing
+2022-08-07 02:20:56,875:INFO:Declaring preprocessing parameters
+2022-08-07 02:20:56,877:INFO:Creating preprocessing pipeline
+2022-08-07 02:20:56,910:INFO:Preprocessing pipeline created successfully
+2022-08-07 02:20:56,910:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2022-08-07 02:20:56,910:INFO:Creating global containers
+2022-08-07 02:20:56,911:INFO:Internal pipeline: Pipeline(memory=None, steps=[('empty_step', 'passthrough')], verbose=False)
+2022-08-07 02:21:44,712:INFO:PyCaret Supervised Module
+2022-08-07 02:21:44,712:INFO:ML Usecase: regression
+2022-08-07 02:21:44,712:INFO:version 2.2.3
+2022-08-07 02:21:44,712:INFO:Initializing setup()
+2022-08-07 02:21:44,712:INFO:setup(target=LIMIT_BAL, ml_usecase=regression, available_plots={'parameter': 'Hyperparameters', 'residuals': 'Residuals', 'error': 'Prediction Error', 'cooks': 'Cooks Distance', 'rfe': 'Feature Selection', 'learning': 'Learning Curve', 'manifold': 'Manifold Learning', 'vc': 'Validation Curve', 'feature': 'Feature Importance', 'feature_all': 'Feature Importance (All)', 'tree': 'Decision Tree'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=None, categorical_imputation=constant, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=mean, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=False, normalize_method=zscore, transformation=False, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=False, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=False, multicollinearity_threshold=0.9, remove_perfect_collinearity=True, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=False, feature_selection_threshold=0.8, feature_selection_method=classic, feature_interaction=False, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=False, transform_target_method=box-cox, data_split_shuffle=True, data_split_stratify=False, fold_strategy=kfold, fold=10, fold_shuffle=False, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=123, log_experiment=False, experiment_name=None, log_plots=False, log_profile=False, log_data=False, silent=False, verbose=True, profile=False, profile_kwargs=None, display=None)
+2022-08-07 02:21:44,712:INFO:Checking environment
+2022-08-07 02:21:44,712:INFO:python_version: 3.8.13
+2022-08-07 02:21:44,712:INFO:python_build: ('default', 'Mar 25 2022 06:15:30')
+2022-08-07 02:21:44,712:INFO:machine: x86_64
+2022-08-07 02:21:44,712:INFO:platform: Linux-5.15.0-43-generic-x86_64-with-glibc2.10
+2022-08-07 02:21:44,712:INFO:Memory: svmem(total=24999211008, available=20218064896, percent=19.1, used=3460616192, free=9066921984, active=3160109056, inactive=10844131328, buffers=560521216, cached=11911151616, shared=911876096, slab=870584320)
+2022-08-07 02:21:44,713:INFO:Physical Core: 4
+2022-08-07 02:21:44,713:INFO:Logical Core: 8
+2022-08-07 02:21:44,713:INFO:Checking libraries
+2022-08-07 02:21:44,713:INFO:pd==1.4.3
+2022-08-07 02:21:44,713:INFO:numpy==1.23.1
+2022-08-07 02:21:44,713:INFO:sklearn==1.1.2
+2022-08-07 02:21:44,713:INFO:xgboost==1.5.1
+2022-08-07 02:21:44,713:INFO:lightgbm==3.3.2
+2022-08-07 02:21:44,713:INFO:catboost==1.0.6
+2022-08-07 02:21:44,714:INFO:mlflow==1.26.1
+2022-08-07 02:21:44,714:INFO:Checking Exceptions
+2022-08-07 02:21:44,714:INFO:Declaring global variables
+2022-08-07 02:21:44,714:INFO:USI: 901d
+2022-08-07 02:21:44,714:INFO:pycaret_globals: {'fix_imbalance_param', 'X_test', 'iterative_imputation_iters_param', '_ml_usecase', 'target_param', 'y_train', 'USI', '_available_plots', 'fold_generator', '_all_models_internal', 'X', 'gpu_param', '_all_metrics', '_gpu_n_jobs_param', 'stratify_param', 'fold_param', 'y', 'create_model_container', 'transform_target_method_param', 'logging_param', 'n_jobs_param', 'seed', 'imputation_regressor', 'display_container', 'log_plots_param', 'imputation_classifier', 'transform_target_param', 'html_param', 'experiment__', 'data_before_preprocess', 'y_test', '_all_models', 'pycaret_globals', 'exp_name_log', '_internal_pipeline', 'fold_groups_param', 'X_train', 'fix_imbalance_method_param', 'master_model_container', 'prep_pipe', 'fold_shuffle_param'}
+2022-08-07 02:21:44,714:INFO:Preparing display monitor
+2022-08-07 02:21:44,714:INFO:Preparing display monitor
+2022-08-07 02:21:44,720:INFO:Importing libraries
+2022-08-07 02:21:44,720:INFO:Copying data for preprocessing
+2022-08-07 02:21:44,723:INFO:Declaring preprocessing parameters
+2022-08-07 02:21:44,725:INFO:Creating preprocessing pipeline
+2022-08-07 02:21:44,759:INFO:Preprocessing pipeline created successfully
+2022-08-07 02:21:44,760:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2022-08-07 02:21:44,760:INFO:Creating global containers
+2022-08-07 02:23:43,548:INFO:PyCaret Supervised Module
+2022-08-07 02:23:43,548:INFO:ML Usecase: regression
+2022-08-07 02:23:43,548:INFO:version 2.2.3
+2022-08-07 02:23:43,548:INFO:Initializing setup()
+2022-08-07 02:23:43,548:INFO:setup(target=default, ml_usecase=regression, available_plots={'parameter': 'Hyperparameters', 'residuals': 'Residuals', 'error': 'Prediction Error', 'cooks': 'Cooks Distance', 'rfe': 'Feature Selection', 'learning': 'Learning Curve', 'manifold': 'Manifold Learning', 'vc': 'Validation Curve', 'feature': 'Feature Importance', 'feature_all': 'Feature Importance (All)', 'tree': 'Decision Tree'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=None, categorical_imputation=constant, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=mean, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=False, normalize_method=zscore, transformation=False, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=False, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=False, multicollinearity_threshold=0.9, remove_perfect_collinearity=True, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=False, feature_selection_threshold=0.8, feature_selection_method=classic, feature_interaction=False, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=False, transform_target_method=box-cox, data_split_shuffle=True, data_split_stratify=False, fold_strategy=kfold, fold=10, fold_shuffle=False, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=None, log_experiment=False, experiment_name=None, log_plots=False, log_profile=False, log_data=False, silent=False, verbose=True, profile=False, profile_kwargs=None, display=None)
+2022-08-07 02:23:43,548:INFO:Checking environment
+2022-08-07 02:23:43,548:INFO:python_version: 3.8.13
+2022-08-07 02:23:43,549:INFO:python_build: ('default', 'Mar 25 2022 06:15:30')
+2022-08-07 02:23:43,549:INFO:machine: x86_64
+2022-08-07 02:23:43,549:INFO:platform: Linux-5.15.0-43-generic-x86_64-with-glibc2.10
+2022-08-07 02:23:43,549:INFO:Memory: svmem(total=24999211008, available=20373819392, percent=18.5, used=3383873536, free=9218846720, active=3163320320, inactive=10725216256, buffers=561197056, cached=11835293696, shared=832864256, slab=869613568)
+2022-08-07 02:23:43,550:INFO:Physical Core: 4
+2022-08-07 02:23:43,550:INFO:Logical Core: 8
+2022-08-07 02:23:43,550:INFO:Checking libraries
+2022-08-07 02:23:43,550:INFO:pd==1.4.3
+2022-08-07 02:23:43,550:INFO:numpy==1.23.1
+2022-08-07 02:23:43,550:INFO:sklearn==1.1.2
+2022-08-07 02:23:43,550:INFO:xgboost==1.5.1
+2022-08-07 02:23:43,550:INFO:lightgbm==3.3.2
+2022-08-07 02:23:43,550:INFO:catboost==1.0.6
+2022-08-07 02:23:43,550:INFO:mlflow==1.26.1
+2022-08-07 02:23:43,550:INFO:Checking Exceptions
+2022-08-07 02:23:43,550:INFO:Declaring global variables
+2022-08-07 02:23:43,551:INFO:USI: d6ea
+2022-08-07 02:23:43,551:INFO:pycaret_globals: {'fix_imbalance_param', 'X_test', 'iterative_imputation_iters_param', '_ml_usecase', 'target_param', 'y_train', 'USI', '_available_plots', 'fold_generator', '_all_models_internal', 'X', 'gpu_param', '_all_metrics', '_gpu_n_jobs_param', 'stratify_param', 'fold_param', 'y', 'create_model_container', 'transform_target_method_param', 'logging_param', 'n_jobs_param', 'seed', 'imputation_regressor', 'display_container', 'log_plots_param', 'imputation_classifier', 'transform_target_param', 'html_param', 'experiment__', 'data_before_preprocess', 'y_test', '_all_models', 'pycaret_globals', 'exp_name_log', '_internal_pipeline', 'fold_groups_param', 'X_train', 'fix_imbalance_method_param', 'master_model_container', 'prep_pipe', 'fold_shuffle_param'}
+2022-08-07 02:23:43,551:INFO:Preparing display monitor
+2022-08-07 02:23:43,551:INFO:Preparing display monitor
+2022-08-07 02:23:43,560:INFO:Importing libraries
+2022-08-07 02:23:43,560:INFO:Copying data for preprocessing
+2022-08-07 02:23:43,563:INFO:Declaring preprocessing parameters
+2022-08-07 02:23:43,565:INFO:Creating preprocessing pipeline
+2022-08-07 02:23:43,606:INFO:Preprocessing pipeline created successfully
+2022-08-07 02:23:43,606:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2022-08-07 02:23:43,606:INFO:Creating global containers
+2022-08-07 02:24:31,288:INFO:PyCaret Supervised Module
+2022-08-07 02:24:31,288:INFO:ML Usecase: regression
+2022-08-07 02:24:31,289:INFO:version 2.2.3
+2022-08-07 02:24:31,289:INFO:Initializing setup()
+2022-08-07 02:24:31,289:INFO:setup(target=Price, ml_usecase=regression, available_plots={'parameter': 'Hyperparameters', 'residuals': 'Residuals', 'error': 'Prediction Error', 'cooks': 'Cooks Distance', 'rfe': 'Feature Selection', 'learning': 'Learning Curve', 'manifold': 'Manifold Learning', 'vc': 'Validation Curve', 'feature': 'Feature Importance', 'feature_all': 'Feature Importance (All)', 'tree': 'Decision Tree'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=None, categorical_imputation=constant, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=mean, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=False, normalize_method=zscore, transformation=False, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=False, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=False, multicollinearity_threshold=0.9, remove_perfect_collinearity=True, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=False, feature_selection_threshold=0.8, feature_selection_method=classic, feature_interaction=False, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=False, transform_target_method=box-cox, data_split_shuffle=True, data_split_stratify=False, fold_strategy=kfold, fold=10, fold_shuffle=False, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=5, log_experiment=False, experiment_name=None, log_plots=False, log_profile=False, log_data=False, silent=False, verbose=True, profile=False, profile_kwargs=None, display=None)
+2022-08-07 02:24:31,289:INFO:Checking environment
+2022-08-07 02:24:31,289:INFO:python_version: 3.8.13
+2022-08-07 02:24:31,289:INFO:python_build: ('default', 'Mar 25 2022 06:15:30')
+2022-08-07 02:24:31,289:INFO:machine: x86_64
+2022-08-07 02:24:31,289:INFO:platform: Linux-5.15.0-43-generic-x86_64-with-glibc2.10
+2022-08-07 02:24:31,289:INFO:Memory: svmem(total=24999211008, available=20373032960, percent=18.5, used=3381993472, free=9218732032, active=3163275264, inactive=10722897920, buffers=561278976, cached=11837206528, shared=835530752, slab=869621760)
+2022-08-07 02:24:31,290:INFO:Physical Core: 4
+2022-08-07 02:24:31,290:INFO:Logical Core: 8
+2022-08-07 02:24:31,290:INFO:Checking libraries
+2022-08-07 02:24:31,290:INFO:pd==1.4.3
+2022-08-07 02:24:31,290:INFO:numpy==1.23.1
+2022-08-07 02:24:31,290:INFO:sklearn==1.1.2
+2022-08-07 02:24:31,290:INFO:xgboost==1.5.1
+2022-08-07 02:24:31,290:INFO:lightgbm==3.3.2
+2022-08-07 02:24:31,290:INFO:catboost==1.0.6
+2022-08-07 02:24:31,290:INFO:mlflow==1.26.1
+2022-08-07 02:24:31,290:INFO:Checking Exceptions
+2022-08-07 02:24:31,290:INFO:Declaring global variables
+2022-08-07 02:24:31,290:INFO:USI: ec97
+2022-08-07 02:24:31,290:INFO:pycaret_globals: {'fix_imbalance_param', 'X_test', 'iterative_imputation_iters_param', '_ml_usecase', 'target_param', 'y_train', 'USI', '_available_plots', 'fold_generator', '_all_models_internal', 'X', 'gpu_param', '_all_metrics', '_gpu_n_jobs_param', 'stratify_param', 'fold_param', 'y', 'create_model_container', 'transform_target_method_param', 'logging_param', 'n_jobs_param', 'seed', 'imputation_regressor', 'display_container', 'log_plots_param', 'imputation_classifier', 'transform_target_param', 'html_param', 'experiment__', 'data_before_preprocess', 'y_test', '_all_models', 'pycaret_globals', 'exp_name_log', '_internal_pipeline', 'fold_groups_param', 'X_train', 'fix_imbalance_method_param', 'master_model_container', 'prep_pipe', 'fold_shuffle_param'}
+2022-08-07 02:24:31,291:INFO:Preparing display monitor
+2022-08-07 02:24:31,291:INFO:Preparing display monitor
+2022-08-07 02:24:31,298:INFO:Importing libraries
+2022-08-07 02:24:31,298:INFO:Copying data for preprocessing
+2022-08-07 02:24:31,299:INFO:Declaring preprocessing parameters
+2022-08-07 02:24:31,300:INFO:Creating preprocessing pipeline
+2022-08-07 02:24:31,305:INFO:Preprocessing pipeline created successfully
+2022-08-07 02:24:31,305:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2022-08-07 02:24:31,305:INFO:Creating global containers
+2022-08-07 02:26:06,720:INFO:PyCaret Supervised Module
+2022-08-07 02:26:06,720:INFO:ML Usecase: regression
+2022-08-07 02:26:06,720:INFO:version 2.2.3
+2022-08-07 02:26:06,721:INFO:Initializing setup()
+2022-08-07 02:26:06,721:INFO:setup(target=Price, ml_usecase=regression, available_plots={'parameter': 'Hyperparameters', 'residuals': 'Residuals', 'error': 'Prediction Error', 'cooks': 'Cooks Distance', 'rfe': 'Feature Selection', 'learning': 'Learning Curve', 'manifold': 'Manifold Learning', 'vc': 'Validation Curve', 'feature': 'Feature Importance', 'feature_all': 'Feature Importance (All)', 'tree': 'Decision Tree'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=None, categorical_imputation=constant, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=mean, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=False, normalize_method=zscore, transformation=False, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=False, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=False, multicollinearity_threshold=0.9, remove_perfect_collinearity=True, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=False, feature_selection_threshold=0.8, feature_selection_method=classic, feature_interaction=False, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=False, transform_target_method=box-cox, data_split_shuffle=True, data_split_stratify=False, fold_strategy=kfold, fold=10, fold_shuffle=False, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=None, log_experiment=False, experiment_name=None, log_plots=False, log_profile=False, log_data=False, silent=False, verbose=True, profile=False, profile_kwargs=None, display=None)
+2022-08-07 02:26:06,721:INFO:Checking environment
+2022-08-07 02:26:06,721:INFO:python_version: 3.8.13
+2022-08-07 02:26:06,721:INFO:python_build: ('default', 'Mar 25 2022 06:15:30')
+2022-08-07 02:26:06,721:INFO:machine: x86_64
+2022-08-07 02:26:06,721:INFO:platform: Linux-5.15.0-43-generic-x86_64-with-glibc2.10
+2022-08-07 02:26:06,721:INFO:Memory: svmem(total=24999211008, available=20380733440, percent=18.5, used=3368099840, free=9226829824, active=3163344896, inactive=10718162944, buffers=561397760, cached=11842883584, shared=841723904, slab=869765120)
+2022-08-07 02:26:06,722:INFO:Physical Core: 4
+2022-08-07 02:26:06,722:INFO:Logical Core: 8
+2022-08-07 02:26:06,722:INFO:Checking libraries
+2022-08-07 02:26:06,722:INFO:pd==1.4.3
+2022-08-07 02:26:06,722:INFO:numpy==1.23.1
+2022-08-07 02:26:06,722:INFO:sklearn==1.1.2
+2022-08-07 02:26:06,722:INFO:xgboost==1.5.1
+2022-08-07 02:26:06,722:INFO:lightgbm==3.3.2
+2022-08-07 02:26:06,722:INFO:catboost==1.0.6
+2022-08-07 02:26:06,722:INFO:mlflow==1.26.1
+2022-08-07 02:26:06,722:INFO:Checking Exceptions
+2022-08-07 02:26:06,722:INFO:Declaring global variables
+2022-08-07 02:26:06,723:INFO:USI: 0f59
+2022-08-07 02:26:06,723:INFO:pycaret_globals: {'fix_imbalance_param', 'X_test', 'iterative_imputation_iters_param', '_ml_usecase', 'target_param', 'y_train', 'USI', '_available_plots', 'fold_generator', '_all_models_internal', 'X', 'gpu_param', '_all_metrics', '_gpu_n_jobs_param', 'stratify_param', 'fold_param', 'y', 'create_model_container', 'transform_target_method_param', 'logging_param', 'n_jobs_param', 'seed', 'imputation_regressor', 'display_container', 'log_plots_param', 'imputation_classifier', 'transform_target_param', 'html_param', 'experiment__', 'data_before_preprocess', 'y_test', '_all_models', 'pycaret_globals', 'exp_name_log', '_internal_pipeline', 'fold_groups_param', 'X_train', 'fix_imbalance_method_param', 'master_model_container', 'prep_pipe', 'fold_shuffle_param'}
+2022-08-07 02:26:06,723:INFO:Preparing display monitor
+2022-08-07 02:26:06,723:INFO:Preparing display monitor
+2022-08-07 02:26:06,731:INFO:Importing libraries
+2022-08-07 02:26:06,731:INFO:Copying data for preprocessing
+2022-08-07 02:26:06,732:INFO:Declaring preprocessing parameters
+2022-08-07 02:26:06,733:INFO:Creating preprocessing pipeline
+2022-08-07 02:26:06,737:INFO:Preprocessing pipeline created successfully
+2022-08-07 02:26:06,737:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2022-08-07 02:26:06,737:INFO:Creating global containers
+2022-08-07 02:30:56,309:INFO:PyCaret Supervised Module
+2022-08-07 02:30:56,309:INFO:ML Usecase: classification
+2022-08-07 02:30:56,309:INFO:version 2.2.3
+2022-08-07 02:30:56,309:INFO:Initializing setup()
+2022-08-07 02:30:56,309:INFO:setup(target=species, ml_usecase=classification, available_plots={'parameter': 'Hyperparameters', 'auc': 'AUC', 'confusion_matrix': 'Confusion Matrix', 'threshold': 'Threshold', 'pr': 'Precision Recall', 'error': 'Prediction Error', 'class_report': 'Class Report', 'rfe': 'Feature Selection', 'learning': 'Learning Curve', 'manifold': 'Manifold Learning', 'calibration': 'Calibration Curve', 'vc': 'Validation Curve', 'dimension': 'Dimensions', 'feature': 'Feature Importance', 'feature_all': 'Feature Importance (All)', 'boundary': 'Decision Boundary', 'lift': 'Lift Chart', 'gain': 'Gain Chart', 'tree': 'Decision Tree'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=None, categorical_imputation=constant, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=mean, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=False, normalize_method=zscore, transformation=False, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=False, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=False, multicollinearity_threshold=0.9, remove_perfect_collinearity=True, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=False, feature_selection_threshold=0.8, feature_selection_method=classic, feature_interaction=False, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=False, transform_target_method=box-cox, data_split_shuffle=True, data_split_stratify=False, fold_strategy=stratifiedkfold, fold=10, fold_shuffle=False, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=123, log_experiment=False, experiment_name=None, log_plots=False, log_profile=False, log_data=False, silent=False, verbose=True, profile=False, profile_kwargs=None, display=None)
+2022-08-07 02:30:56,309:INFO:Checking environment
+2022-08-07 02:30:56,309:INFO:python_version: 3.8.13
+2022-08-07 02:30:56,309:INFO:python_build: ('default', 'Mar 25 2022 06:15:30')
+2022-08-07 02:30:56,309:INFO:machine: x86_64
+2022-08-07 02:30:56,309:INFO:platform: Linux-5.15.0-43-generic-x86_64-with-glibc2.10
+2022-08-07 02:30:56,310:INFO:Memory: svmem(total=24999211008, available=20118642688, percent=19.5, used=3611992064, free=8960225280, active=3169628160, inactive=10958000128, buffers=563646464, cached=11863347200, shared=859897856, slab=872681472)
+2022-08-07 02:30:56,310:INFO:Physical Core: 4
+2022-08-07 02:30:56,310:INFO:Logical Core: 8
+2022-08-07 02:30:56,311:INFO:Checking libraries
+2022-08-07 02:30:56,311:INFO:pd==1.4.3
+2022-08-07 02:30:56,311:INFO:numpy==1.23.1
+2022-08-07 02:30:56,311:INFO:sklearn==1.1.2
+2022-08-07 02:30:56,311:INFO:xgboost==1.5.1
+2022-08-07 02:30:56,311:INFO:lightgbm==3.3.2
+2022-08-07 02:30:56,311:INFO:catboost==1.0.6
+2022-08-07 02:30:56,311:INFO:mlflow==1.26.1
+2022-08-07 02:30:56,311:INFO:Checking Exceptions
+2022-08-07 02:30:56,311:INFO:Declaring global variables
+2022-08-07 02:30:56,311:INFO:USI: 3fcc
+2022-08-07 02:30:56,311:INFO:pycaret_globals: {'fix_imbalance_param', 'X_test', 'iterative_imputation_iters_param', '_ml_usecase', 'target_param', 'y_train', 'USI', '_available_plots', 'fold_generator', '_all_models_internal', 'X', 'gpu_param', '_all_metrics', '_gpu_n_jobs_param', 'stratify_param', 'fold_param', 'y', 'create_model_container', 'transform_target_method_param', 'logging_param', 'n_jobs_param', 'seed', 'imputation_regressor', 'display_container', 'log_plots_param', 'imputation_classifier', 'transform_target_param', 'html_param', 'experiment__', 'data_before_preprocess', 'y_test', '_all_models', 'pycaret_globals', 'exp_name_log', '_internal_pipeline', 'fold_groups_param', 'X_train', 'fix_imbalance_method_param', 'master_model_container', 'prep_pipe', 'fold_shuffle_param'}
+2022-08-07 02:30:56,311:INFO:Preparing display monitor
+2022-08-07 02:30:56,311:INFO:Preparing display monitor
+2022-08-07 02:30:56,317:INFO:Importing libraries
+2022-08-07 02:30:56,317:INFO:Copying data for preprocessing
+2022-08-07 02:30:56,319:INFO:Declaring preprocessing parameters
+2022-08-07 02:30:56,319:INFO:Creating preprocessing pipeline
+2022-08-07 02:30:56,320:INFO:Preprocessing pipeline created successfully
+2022-08-07 02:30:56,320:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2022-08-07 02:30:56,320:INFO:Creating global containers
+2022-08-07 02:31:29,966:INFO:Initializing create_model()
+2022-08-07 02:31:29,967:INFO:create_model(estimator=lr, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, verbose=True, system=True, metrics=None, display=None, kwargs={})
+2022-08-07 02:31:29,967:INFO:Checking exceptions
+2022-08-07 02:31:39,041:INFO:PyCaret Supervised Module
+2022-08-07 02:31:39,041:INFO:ML Usecase: classification
+2022-08-07 02:31:39,041:INFO:version 2.2.3
+2022-08-07 02:31:39,041:INFO:Initializing setup()
+2022-08-07 02:31:39,041:INFO:setup(target=species, ml_usecase=classification, available_plots={'parameter': 'Hyperparameters', 'auc': 'AUC', 'confusion_matrix': 'Confusion Matrix', 'threshold': 'Threshold', 'pr': 'Precision Recall', 'error': 'Prediction Error', 'class_report': 'Class Report', 'rfe': 'Feature Selection', 'learning': 'Learning Curve', 'manifold': 'Manifold Learning', 'calibration': 'Calibration Curve', 'vc': 'Validation Curve', 'dimension': 'Dimensions', 'feature': 'Feature Importance', 'feature_all': 'Feature Importance (All)', 'boundary': 'Decision Boundary', 'lift': 'Lift Chart', 'gain': 'Gain Chart', 'tree': 'Decision Tree'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=None, categorical_imputation=constant, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=mean, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=False, normalize_method=zscore, transformation=False, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=False, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=False, multicollinearity_threshold=0.9, remove_perfect_collinearity=True, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=False, feature_selection_threshold=0.8, feature_selection_method=classic, feature_interaction=False, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=False, transform_target_method=box-cox, data_split_shuffle=True, data_split_stratify=False, fold_strategy=stratifiedkfold, fold=10, fold_shuffle=False, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=123, log_experiment=False, experiment_name=None, log_plots=False, log_profile=False, log_data=False, silent=False, verbose=True, profile=False, profile_kwargs=None, display=None)
+2022-08-07 02:31:39,041:INFO:Checking environment
+2022-08-07 02:31:39,041:INFO:python_version: 3.8.13
+2022-08-07 02:31:39,041:INFO:python_build: ('default', 'Mar 25 2022 06:15:30')
+2022-08-07 02:31:39,041:INFO:machine: x86_64
+2022-08-07 02:31:39,042:INFO:platform: Linux-5.15.0-43-generic-x86_64-with-glibc2.10
+2022-08-07 02:31:39,042:INFO:Memory: svmem(total=24999211008, available=20124078080, percent=19.5, used=3605385216, free=8964886528, active=3169828864, inactive=10958942208, buffers=563736576, cached=11865202688, shared=861093888, slab=872677376)
+2022-08-07 02:31:39,042:INFO:Physical Core: 4
+2022-08-07 02:31:39,043:INFO:Logical Core: 8
+2022-08-07 02:31:39,043:INFO:Checking libraries
+2022-08-07 02:31:39,043:INFO:pd==1.4.3
+2022-08-07 02:31:39,043:INFO:numpy==1.23.1
+2022-08-07 02:31:39,043:INFO:sklearn==1.1.2
+2022-08-07 02:31:39,043:INFO:xgboost==1.5.1
+2022-08-07 02:31:39,043:INFO:lightgbm==3.3.2
+2022-08-07 02:31:39,043:INFO:catboost==1.0.6
+2022-08-07 02:31:39,043:INFO:mlflow==1.26.1
+2022-08-07 02:31:39,043:INFO:Checking Exceptions
+2022-08-07 02:31:39,043:INFO:Declaring global variables
+2022-08-07 02:31:39,043:INFO:USI: 2369
+2022-08-07 02:31:39,043:INFO:pycaret_globals: {'fix_imbalance_param', 'X_test', 'iterative_imputation_iters_param', '_ml_usecase', 'target_param', 'y_train', 'USI', '_available_plots', 'fold_generator', '_all_models_internal', 'X', 'gpu_param', '_all_metrics', '_gpu_n_jobs_param', 'stratify_param', 'fold_param', 'y', 'create_model_container', 'transform_target_method_param', 'logging_param', 'n_jobs_param', 'seed', 'imputation_regressor', 'display_container', 'log_plots_param', 'imputation_classifier', 'transform_target_param', 'html_param', 'experiment__', 'data_before_preprocess', 'y_test', '_all_models', 'pycaret_globals', 'exp_name_log', '_internal_pipeline', 'fold_groups_param', 'X_train', 'fix_imbalance_method_param', 'master_model_container', 'prep_pipe', 'fold_shuffle_param'}
+2022-08-07 02:31:39,043:INFO:Preparing display monitor
+2022-08-07 02:31:39,043:INFO:Preparing display monitor
+2022-08-07 02:31:39,051:INFO:Importing libraries
+2022-08-07 02:31:39,051:INFO:Copying data for preprocessing
+2022-08-07 02:31:39,052:INFO:Declaring preprocessing parameters
+2022-08-07 02:31:39,053:INFO:Creating preprocessing pipeline
+2022-08-07 02:31:39,054:INFO:Preprocessing pipeline created successfully
+2022-08-07 02:31:39,054:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2022-08-07 02:31:39,054:INFO:Creating global containers
+2022-08-07 02:31:46,401:INFO:Initializing create_model()
+2022-08-07 02:31:46,401:INFO:create_model(estimator=lr, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, verbose=True, system=True, metrics=None, display=None, kwargs={})
+2022-08-07 02:31:46,401:INFO:Checking exceptions
+2022-08-07 02:32:53,264:INFO:PyCaret Supervised Module
+2022-08-07 02:32:53,264:INFO:ML Usecase: classification
+2022-08-07 02:32:53,264:INFO:version 2.2.3
+2022-08-07 02:32:53,264:INFO:Initializing setup()
+2022-08-07 02:32:53,265:INFO:setup(target=Price, ml_usecase=classification, available_plots={'parameter': 'Hyperparameters', 'auc': 'AUC', 'confusion_matrix': 'Confusion Matrix', 'threshold': 'Threshold', 'pr': 'Precision Recall', 'error': 'Prediction Error', 'class_report': 'Class Report', 'rfe': 'Feature Selection', 'learning': 'Learning Curve', 'manifold': 'Manifold Learning', 'calibration': 'Calibration Curve', 'vc': 'Validation Curve', 'dimension': 'Dimensions', 'feature': 'Feature Importance', 'feature_all': 'Feature Importance (All)', 'boundary': 'Decision Boundary', 'lift': 'Lift Chart', 'gain': 'Gain Chart', 'tree': 'Decision Tree'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=None, categorical_imputation=constant, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=mean, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=False, normalize_method=zscore, transformation=False, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=False, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=False, multicollinearity_threshold=0.9, remove_perfect_collinearity=True, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=False, feature_selection_threshold=0.8, feature_selection_method=classic, feature_interaction=False, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=False, transform_target_method=box-cox, data_split_shuffle=True, data_split_stratify=False, fold_strategy=stratifiedkfold, fold=10, fold_shuffle=False, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=None, log_experiment=False, experiment_name=None, log_plots=False, log_profile=False, log_data=False, silent=False, verbose=True, profile=False, profile_kwargs=None, display=None)
+2022-08-07 02:32:53,265:INFO:Checking environment
+2022-08-07 02:32:53,265:INFO:python_version: 3.8.13
+2022-08-07 02:32:53,265:INFO:python_build: ('default', 'Mar 25 2022 06:15:30')
+2022-08-07 02:32:53,265:INFO:machine: x86_64
+2022-08-07 02:32:53,265:INFO:platform: Linux-5.15.0-43-generic-x86_64-with-glibc2.10
+2022-08-07 02:32:53,265:INFO:Memory: svmem(total=24999211008, available=20014694400, percent=19.9, used=3663343616, free=8856150016, active=3170922496, inactive=11013619712, buffers=563998720, cached=11915718656, shared=912510976, slab=872615936)
+2022-08-07 02:32:53,266:INFO:Physical Core: 4
+2022-08-07 02:32:53,266:INFO:Logical Core: 8
+2022-08-07 02:32:53,266:INFO:Checking libraries
+2022-08-07 02:32:53,266:INFO:pd==1.4.3
+2022-08-07 02:32:53,266:INFO:numpy==1.23.1
+2022-08-07 02:32:53,266:INFO:sklearn==1.1.2
+2022-08-07 02:32:53,266:INFO:xgboost==1.5.1
+2022-08-07 02:32:53,266:INFO:lightgbm==3.3.2
+2022-08-07 02:32:53,266:INFO:catboost==1.0.6
+2022-08-07 02:32:53,266:INFO:mlflow==1.26.1
+2022-08-07 02:32:53,266:INFO:Checking Exceptions
+2022-08-07 02:32:53,266:INFO:Declaring global variables
+2022-08-07 02:32:53,266:INFO:USI: cd7f
+2022-08-07 02:32:53,266:INFO:pycaret_globals: {'fix_imbalance_param', 'X_test', 'iterative_imputation_iters_param', '_ml_usecase', 'target_param', 'y_train', 'USI', '_available_plots', 'fold_generator', '_all_models_internal', 'X', 'gpu_param', '_all_metrics', '_gpu_n_jobs_param', 'stratify_param', 'fold_param', 'y', 'create_model_container', 'transform_target_method_param', 'logging_param', 'n_jobs_param', 'seed', 'imputation_regressor', 'display_container', 'log_plots_param', 'imputation_classifier', 'transform_target_param', 'html_param', 'experiment__', 'data_before_preprocess', 'y_test', '_all_models', 'pycaret_globals', 'exp_name_log', '_internal_pipeline', 'fold_groups_param', 'X_train', 'fix_imbalance_method_param', 'master_model_container', 'prep_pipe', 'fold_shuffle_param'}
+2022-08-07 02:32:53,266:INFO:Preparing display monitor
+2022-08-07 02:32:53,267:INFO:Preparing display monitor
+2022-08-07 02:32:53,274:INFO:Importing libraries
+2022-08-07 02:32:53,275:INFO:Copying data for preprocessing
+2022-08-07 02:32:53,276:INFO:Declaring preprocessing parameters
+2022-08-07 02:32:53,276:INFO:Creating preprocessing pipeline
+2022-08-07 02:32:53,281:INFO:Preprocessing pipeline created successfully
+2022-08-07 02:32:53,281:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2022-08-07 02:32:53,281:INFO:Creating global containers
+2022-08-07 02:32:57,953:INFO:PyCaret Supervised Module
+2022-08-07 02:32:57,953:INFO:ML Usecase: classification
+2022-08-07 02:32:57,953:INFO:version 2.2.3
+2022-08-07 02:32:57,953:INFO:Initializing setup()
+2022-08-07 02:32:57,953:INFO:setup(target=species, ml_usecase=classification, available_plots={'parameter': 'Hyperparameters', 'auc': 'AUC', 'confusion_matrix': 'Confusion Matrix', 'threshold': 'Threshold', 'pr': 'Precision Recall', 'error': 'Prediction Error', 'class_report': 'Class Report', 'rfe': 'Feature Selection', 'learning': 'Learning Curve', 'manifold': 'Manifold Learning', 'calibration': 'Calibration Curve', 'vc': 'Validation Curve', 'dimension': 'Dimensions', 'feature': 'Feature Importance', 'feature_all': 'Feature Importance (All)', 'boundary': 'Decision Boundary', 'lift': 'Lift Chart', 'gain': 'Gain Chart', 'tree': 'Decision Tree'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=None, categorical_imputation=constant, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=mean, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=False, normalize_method=zscore, transformation=False, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=False, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=False, multicollinearity_threshold=0.9, remove_perfect_collinearity=True, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=False, feature_selection_threshold=0.8, feature_selection_method=classic, feature_interaction=False, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=False, transform_target_method=box-cox, data_split_shuffle=True, data_split_stratify=False, fold_strategy=stratifiedkfold, fold=10, fold_shuffle=False, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=123, log_experiment=False, experiment_name=None, log_plots=False, log_profile=False, log_data=False, silent=False, verbose=True, profile=False, profile_kwargs=None, display=None)
+2022-08-07 02:32:57,953:INFO:Checking environment
+2022-08-07 02:32:57,953:INFO:python_version: 3.8.13
+2022-08-07 02:32:57,953:INFO:python_build: ('default', 'Mar 25 2022 06:15:30')
+2022-08-07 02:32:57,953:INFO:machine: x86_64
+2022-08-07 02:32:57,953:INFO:platform: Linux-5.15.0-43-generic-x86_64-with-glibc2.10
+2022-08-07 02:32:57,954:INFO:Memory: svmem(total=24999211008, available=20011175936, percent=20.0, used=3667173376, free=8852619264, active=3170922496, inactive=11012272128, buffers=563998720, cached=11915419648, shared=912207872, slab=872615936)
+2022-08-07 02:32:57,954:INFO:Physical Core: 4
+2022-08-07 02:32:57,954:INFO:Logical Core: 8
+2022-08-07 02:32:57,954:INFO:Checking libraries
+2022-08-07 02:32:57,954:INFO:pd==1.4.3
+2022-08-07 02:32:57,954:INFO:numpy==1.23.1
+2022-08-07 02:32:57,955:INFO:sklearn==1.1.2
+2022-08-07 02:32:57,955:INFO:xgboost==1.5.1
+2022-08-07 02:32:57,955:INFO:lightgbm==3.3.2
+2022-08-07 02:32:57,955:INFO:catboost==1.0.6
+2022-08-07 02:32:57,955:INFO:mlflow==1.26.1
+2022-08-07 02:32:57,955:INFO:Checking Exceptions
+2022-08-07 02:32:57,955:INFO:Declaring global variables
+2022-08-07 02:32:57,955:INFO:USI: ad44
+2022-08-07 02:32:57,955:INFO:pycaret_globals: {'fix_imbalance_param', 'X_test', 'iterative_imputation_iters_param', '_ml_usecase', 'target_param', 'y_train', 'USI', '_available_plots', 'fold_generator', '_all_models_internal', 'X', 'gpu_param', '_all_metrics', '_gpu_n_jobs_param', 'stratify_param', 'fold_param', 'y', 'create_model_container', 'transform_target_method_param', 'logging_param', 'n_jobs_param', 'seed', 'imputation_regressor', 'display_container', 'log_plots_param', 'imputation_classifier', 'transform_target_param', 'html_param', 'experiment__', 'data_before_preprocess', 'y_test', '_all_models', 'pycaret_globals', 'exp_name_log', '_internal_pipeline', 'fold_groups_param', 'X_train', 'fix_imbalance_method_param', 'master_model_container', 'prep_pipe', 'fold_shuffle_param'}
+2022-08-07 02:32:57,955:INFO:Preparing display monitor
+2022-08-07 02:32:57,955:INFO:Preparing display monitor
+2022-08-07 02:32:57,962:INFO:Importing libraries
+2022-08-07 02:32:57,962:INFO:Copying data for preprocessing
+2022-08-07 02:32:57,964:INFO:Declaring preprocessing parameters
+2022-08-07 02:32:57,964:INFO:Creating preprocessing pipeline
+2022-08-07 02:32:57,965:INFO:Preprocessing pipeline created successfully
+2022-08-07 02:32:57,965:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2022-08-07 02:32:57,965:INFO:Creating global containers
+2022-08-07 02:39:48,587:INFO:PyCaret Supervised Module
+2022-08-07 02:39:48,587:INFO:ML Usecase: classification
+2022-08-07 02:39:48,588:INFO:version 2.2.3
+2022-08-07 02:39:48,588:INFO:Initializing setup()
+2022-08-07 02:39:48,588:INFO:setup(target=LIMIT_BAL, ml_usecase=classification, available_plots={'parameter': 'Hyperparameters', 'auc': 'AUC', 'confusion_matrix': 'Confusion Matrix', 'threshold': 'Threshold', 'pr': 'Precision Recall', 'error': 'Prediction Error', 'class_report': 'Class Report', 'rfe': 'Feature Selection', 'learning': 'Learning Curve', 'manifold': 'Manifold Learning', 'calibration': 'Calibration Curve', 'vc': 'Validation Curve', 'dimension': 'Dimensions', 'feature': 'Feature Importance', 'feature_all': 'Feature Importance (All)', 'boundary': 'Decision Boundary', 'lift': 'Lift Chart', 'gain': 'Gain Chart', 'tree': 'Decision Tree'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=None, categorical_imputation=constant, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=mean, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=False, normalize_method=zscore, transformation=False, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=False, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=False, multicollinearity_threshold=0.9, remove_perfect_collinearity=True, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=False, feature_selection_threshold=0.8, feature_selection_method=classic, feature_interaction=False, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=False, transform_target_method=box-cox, data_split_shuffle=True, data_split_stratify=False, fold_strategy=stratifiedkfold, fold=10, fold_shuffle=False, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=123, log_experiment=False, experiment_name=None, log_plots=False, log_profile=False, log_data=False, silent=False, verbose=True, profile=False, profile_kwargs=None, display=None)
+2022-08-07 02:39:48,588:INFO:Checking environment
+2022-08-07 02:39:48,588:INFO:python_version: 3.8.13
+2022-08-07 02:39:48,588:INFO:python_build: ('default', 'Mar 25 2022 06:15:30')
+2022-08-07 02:39:48,588:INFO:machine: x86_64
+2022-08-07 02:39:48,588:INFO:platform: Linux-5.15.0-43-generic-x86_64-with-glibc2.10
+2022-08-07 02:39:48,588:INFO:Memory: svmem(total=24999211008, available=20433199104, percent=18.3, used=3303600128, free=9258754048, active=3183951872, inactive=10662236160, buffers=566411264, cached=11870445568, shared=853757952, slab=872034304)
+2022-08-07 02:39:48,589:INFO:Physical Core: 4
+2022-08-07 02:39:48,589:INFO:Logical Core: 8
+2022-08-07 02:39:48,589:INFO:Checking libraries
+2022-08-07 02:39:48,589:INFO:pd==1.4.3
+2022-08-07 02:39:48,589:INFO:numpy==1.23.1
+2022-08-07 02:39:48,589:INFO:sklearn==1.1.2
+2022-08-07 02:39:48,589:INFO:xgboost==1.5.1
+2022-08-07 02:39:48,589:INFO:lightgbm==3.3.2
+2022-08-07 02:39:48,589:INFO:catboost==1.0.6
+2022-08-07 02:39:48,589:INFO:mlflow==1.26.1
+2022-08-07 02:39:48,589:INFO:Checking Exceptions
+2022-08-07 02:39:48,589:INFO:Declaring global variables
+2022-08-07 02:39:48,589:INFO:USI: aa6e
+2022-08-07 02:39:48,589:INFO:pycaret_globals: {'fix_imbalance_param', 'X_test', 'iterative_imputation_iters_param', '_ml_usecase', 'target_param', 'y_train', 'USI', '_available_plots', 'fold_generator', '_all_models_internal', 'X', 'gpu_param', '_all_metrics', '_gpu_n_jobs_param', 'stratify_param', 'fold_param', 'y', 'create_model_container', 'transform_target_method_param', 'logging_param', 'n_jobs_param', 'seed', 'imputation_regressor', 'display_container', 'log_plots_param', 'imputation_classifier', 'transform_target_param', 'html_param', 'experiment__', 'data_before_preprocess', 'y_test', '_all_models', 'pycaret_globals', 'exp_name_log', '_internal_pipeline', 'fold_groups_param', 'X_train', 'fix_imbalance_method_param', 'master_model_container', 'prep_pipe', 'fold_shuffle_param'}
+2022-08-07 02:39:48,589:INFO:Preparing display monitor
+2022-08-07 02:39:48,589:INFO:Preparing display monitor
+2022-08-07 02:39:48,596:INFO:Importing libraries
+2022-08-07 02:39:48,596:INFO:Copying data for preprocessing
+2022-08-07 02:39:48,598:INFO:Declaring preprocessing parameters
+2022-08-07 02:39:48,599:INFO:Creating preprocessing pipeline
+2022-08-07 02:39:48,636:INFO:Preprocessing pipeline created successfully
+2022-08-07 02:39:48,636:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2022-08-07 02:39:48,636:INFO:Creating global containers
+2022-08-07 02:40:00,771:INFO:PyCaret Supervised Module
+2022-08-07 02:40:00,771:INFO:ML Usecase: classification
+2022-08-07 02:40:00,771:INFO:version 2.2.3
+2022-08-07 02:40:00,771:INFO:Initializing setup()
+2022-08-07 02:40:00,771:INFO:setup(target=default, ml_usecase=classification, available_plots={'parameter': 'Hyperparameters', 'auc': 'AUC', 'confusion_matrix': 'Confusion Matrix', 'threshold': 'Threshold', 'pr': 'Precision Recall', 'error': 'Prediction Error', 'class_report': 'Class Report', 'rfe': 'Feature Selection', 'learning': 'Learning Curve', 'manifold': 'Manifold Learning', 'calibration': 'Calibration Curve', 'vc': 'Validation Curve', 'dimension': 'Dimensions', 'feature': 'Feature Importance', 'feature_all': 'Feature Importance (All)', 'boundary': 'Decision Boundary', 'lift': 'Lift Chart', 'gain': 'Gain Chart', 'tree': 'Decision Tree'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=None, categorical_imputation=constant, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=mean, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=False, normalize_method=zscore, transformation=False, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=False, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=False, multicollinearity_threshold=0.9, remove_perfect_collinearity=True, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=False, feature_selection_threshold=0.8, feature_selection_method=classic, feature_interaction=False, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=False, transform_target_method=box-cox, data_split_shuffle=True, data_split_stratify=False, fold_strategy=stratifiedkfold, fold=10, fold_shuffle=False, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=None, log_experiment=False, experiment_name=None, log_plots=False, log_profile=False, log_data=False, silent=False, verbose=True, profile=False, profile_kwargs=None, display=None)
+2022-08-07 02:40:00,771:INFO:Checking environment
+2022-08-07 02:40:00,771:INFO:python_version: 3.8.13
+2022-08-07 02:40:00,771:INFO:python_build: ('default', 'Mar 25 2022 06:15:30')
+2022-08-07 02:40:00,771:INFO:machine: x86_64
+2022-08-07 02:40:00,771:INFO:platform: Linux-5.15.0-43-generic-x86_64-with-glibc2.10
+2022-08-07 02:40:00,772:INFO:Memory: svmem(total=24999211008, available=20428742656, percent=18.3, used=3307233280, free=9254285312, active=3183960064, inactive=10656772096, buffers=566419456, cached=11871272960, shared=854581248, slab=872001536)
+2022-08-07 02:40:00,772:INFO:Physical Core: 4
+2022-08-07 02:40:00,772:INFO:Logical Core: 8
+2022-08-07 02:40:00,772:INFO:Checking libraries
+2022-08-07 02:40:00,772:INFO:pd==1.4.3
+2022-08-07 02:40:00,772:INFO:numpy==1.23.1
+2022-08-07 02:40:00,772:INFO:sklearn==1.1.2
+2022-08-07 02:40:00,772:INFO:xgboost==1.5.1
+2022-08-07 02:40:00,772:INFO:lightgbm==3.3.2
+2022-08-07 02:40:00,772:INFO:catboost==1.0.6
+2022-08-07 02:40:00,772:INFO:mlflow==1.26.1
+2022-08-07 02:40:00,773:INFO:Checking Exceptions
+2022-08-07 02:40:00,773:INFO:Declaring global variables
+2022-08-07 02:40:00,773:INFO:USI: f68e
+2022-08-07 02:40:00,773:INFO:pycaret_globals: {'fix_imbalance_param', 'X_test', 'iterative_imputation_iters_param', '_ml_usecase', 'target_param', 'y_train', 'USI', '_available_plots', 'fold_generator', '_all_models_internal', 'X', 'gpu_param', '_all_metrics', '_gpu_n_jobs_param', 'stratify_param', 'fold_param', 'y', 'create_model_container', 'transform_target_method_param', 'logging_param', 'n_jobs_param', 'seed', 'imputation_regressor', 'display_container', 'log_plots_param', 'imputation_classifier', 'transform_target_param', 'html_param', 'experiment__', 'data_before_preprocess', 'y_test', '_all_models', 'pycaret_globals', 'exp_name_log', '_internal_pipeline', 'fold_groups_param', 'X_train', 'fix_imbalance_method_param', 'master_model_container', 'prep_pipe', 'fold_shuffle_param'}
+2022-08-07 02:40:00,773:INFO:Preparing display monitor
+2022-08-07 02:40:00,773:INFO:Preparing display monitor
+2022-08-07 02:40:00,779:INFO:Importing libraries
+2022-08-07 02:40:00,780:INFO:Copying data for preprocessing
+2022-08-07 02:40:00,782:INFO:Declaring preprocessing parameters
+2022-08-07 02:40:00,784:INFO:Creating preprocessing pipeline
+2022-08-07 02:40:00,819:INFO:Preprocessing pipeline created successfully
+2022-08-07 02:40:00,819:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2022-08-07 02:40:00,819:INFO:Creating global containers
+2022-08-07 02:40:03,235:INFO:Initializing create_model()
+2022-08-07 02:40:03,235:INFO:create_model(estimator=dt, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, verbose=True, system=True, metrics=None, display=None, kwargs={})
+2022-08-07 02:40:03,235:INFO:Checking exceptions
+2022-08-07 02:40:15,355:INFO:PyCaret Supervised Module
+2022-08-07 02:40:15,355:INFO:ML Usecase: regression
+2022-08-07 02:40:15,355:INFO:version 2.2.3
+2022-08-07 02:40:15,355:INFO:Initializing setup()
+2022-08-07 02:40:15,355:INFO:setup(target=Price, ml_usecase=regression, available_plots={'parameter': 'Hyperparameters', 'residuals': 'Residuals', 'error': 'Prediction Error', 'cooks': 'Cooks Distance', 'rfe': 'Feature Selection', 'learning': 'Learning Curve', 'manifold': 'Manifold Learning', 'vc': 'Validation Curve', 'feature': 'Feature Importance', 'feature_all': 'Feature Importance (All)', 'tree': 'Decision Tree'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=None, categorical_imputation=constant, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=mean, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=False, normalize_method=zscore, transformation=False, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=False, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=False, multicollinearity_threshold=0.9, remove_perfect_collinearity=True, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=False, feature_selection_threshold=0.8, feature_selection_method=classic, feature_interaction=False, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=False, transform_target_method=box-cox, data_split_shuffle=True, data_split_stratify=False, fold_strategy=kfold, fold=10, fold_shuffle=False, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=None, log_experiment=False, experiment_name=None, log_plots=False, log_profile=False, log_data=False, silent=False, verbose=True, profile=False, profile_kwargs=None, display=None)
+2022-08-07 02:40:15,355:INFO:Checking environment
+2022-08-07 02:40:15,355:INFO:python_version: 3.8.13
+2022-08-07 02:40:15,355:INFO:python_build: ('default', 'Mar 25 2022 06:15:30')
+2022-08-07 02:40:15,355:INFO:machine: x86_64
+2022-08-07 02:40:15,355:INFO:platform: Linux-5.15.0-43-generic-x86_64-with-glibc2.10
+2022-08-07 02:40:15,356:INFO:Memory: svmem(total=24999211008, available=20432011264, percent=18.3, used=3306582016, free=9256824832, active=3184021504, inactive=10666942464, buffers=566484992, cached=11869319168, shared=851955712, slab=872005632)
+2022-08-07 02:40:15,356:INFO:Physical Core: 4
+2022-08-07 02:40:15,356:INFO:Logical Core: 8
+2022-08-07 02:40:15,356:INFO:Checking libraries
+2022-08-07 02:40:15,356:INFO:pd==1.4.3
+2022-08-07 02:40:15,356:INFO:numpy==1.23.1
+2022-08-07 02:40:15,356:INFO:sklearn==1.1.2
+2022-08-07 02:40:15,356:INFO:xgboost==1.5.1
+2022-08-07 02:40:15,356:INFO:lightgbm==3.3.2
+2022-08-07 02:40:15,356:INFO:catboost==1.0.6
+2022-08-07 02:40:15,357:INFO:mlflow==1.26.1
+2022-08-07 02:40:15,357:INFO:Checking Exceptions
+2022-08-07 02:40:15,357:INFO:Declaring global variables
+2022-08-07 02:40:15,357:INFO:USI: 4c7a
+2022-08-07 02:40:15,357:INFO:pycaret_globals: {'fix_imbalance_param', 'X_test', 'iterative_imputation_iters_param', '_ml_usecase', 'target_param', 'y_train', 'USI', '_available_plots', 'fold_generator', '_all_models_internal', 'X', 'gpu_param', '_all_metrics', '_gpu_n_jobs_param', 'stratify_param', 'fold_param', 'y', 'create_model_container', 'transform_target_method_param', 'logging_param', 'n_jobs_param', 'seed', 'imputation_regressor', 'display_container', 'log_plots_param', 'imputation_classifier', 'transform_target_param', 'html_param', 'experiment__', 'data_before_preprocess', 'y_test', '_all_models', 'pycaret_globals', 'exp_name_log', '_internal_pipeline', 'fold_groups_param', 'X_train', 'fix_imbalance_method_param', 'master_model_container', 'prep_pipe', 'fold_shuffle_param'}
+2022-08-07 02:40:15,357:INFO:Preparing display monitor
+2022-08-07 02:40:15,357:INFO:Preparing display monitor
+2022-08-07 02:40:15,363:INFO:Importing libraries
+2022-08-07 02:40:15,363:INFO:Copying data for preprocessing
+2022-08-07 02:40:15,364:INFO:Declaring preprocessing parameters
+2022-08-07 02:40:15,365:INFO:Creating preprocessing pipeline
+2022-08-07 02:40:15,366:INFO:Preprocessing pipeline created successfully
+2022-08-07 02:40:15,366:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2022-08-07 02:40:15,366:INFO:Creating global containers
+2022-08-07 02:40:21,948:INFO:PyCaret Supervised Module
+2022-08-07 02:40:21,948:INFO:ML Usecase: regression
+2022-08-07 02:40:21,948:INFO:version 2.2.3
+2022-08-07 02:40:21,948:INFO:Initializing setup()
+2022-08-07 02:40:21,948:INFO:setup(target=Price, ml_usecase=regression, available_plots={'parameter': 'Hyperparameters', 'residuals': 'Residuals', 'error': 'Prediction Error', 'cooks': 'Cooks Distance', 'rfe': 'Feature Selection', 'learning': 'Learning Curve', 'manifold': 'Manifold Learning', 'vc': 'Validation Curve', 'feature': 'Feature Importance', 'feature_all': 'Feature Importance (All)', 'tree': 'Decision Tree'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=None, categorical_imputation=constant, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=mean, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=False, normalize_method=zscore, transformation=False, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=False, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=False, multicollinearity_threshold=0.9, remove_perfect_collinearity=True, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=False, feature_selection_threshold=0.8, feature_selection_method=classic, feature_interaction=False, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=False, transform_target_method=box-cox, data_split_shuffle=True, data_split_stratify=False, fold_strategy=kfold, fold=10, fold_shuffle=False, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=5, log_experiment=False, experiment_name=None, log_plots=False, log_profile=False, log_data=False, silent=False, verbose=True, profile=False, profile_kwargs=None, display=None)
+2022-08-07 02:40:21,948:INFO:Checking environment
+2022-08-07 02:40:21,948:INFO:python_version: 3.8.13
+2022-08-07 02:40:21,948:INFO:python_build: ('default', 'Mar 25 2022 06:15:30')
+2022-08-07 02:40:21,949:INFO:machine: x86_64
+2022-08-07 02:40:21,949:INFO:platform: Linux-5.15.0-43-generic-x86_64-with-glibc2.10
+2022-08-07 02:40:21,949:INFO:Memory: svmem(total=24999211008, available=20433821696, percent=18.3, used=3305332736, free=9258614784, active=3184037888, inactive=10665680896, buffers=566493184, cached=11868770304, shared=851402752, slab=872005632)
+2022-08-07 02:40:21,949:INFO:Physical Core: 4
+2022-08-07 02:40:21,949:INFO:Logical Core: 8
+2022-08-07 02:40:21,949:INFO:Checking libraries
+2022-08-07 02:40:21,949:INFO:pd==1.4.3
+2022-08-07 02:40:21,949:INFO:numpy==1.23.1
+2022-08-07 02:40:21,950:INFO:sklearn==1.1.2
+2022-08-07 02:40:21,950:INFO:xgboost==1.5.1
+2022-08-07 02:40:21,950:INFO:lightgbm==3.3.2
+2022-08-07 02:40:21,950:INFO:catboost==1.0.6
+2022-08-07 02:40:21,950:INFO:mlflow==1.26.1
+2022-08-07 02:40:21,950:INFO:Checking Exceptions
+2022-08-07 02:40:21,950:INFO:Declaring global variables
+2022-08-07 02:40:21,950:INFO:USI: 2bff
+2022-08-07 02:40:21,950:INFO:pycaret_globals: {'fix_imbalance_param', 'X_test', 'iterative_imputation_iters_param', '_ml_usecase', 'target_param', 'y_train', 'USI', '_available_plots', 'fold_generator', '_all_models_internal', 'X', 'gpu_param', '_all_metrics', '_gpu_n_jobs_param', 'stratify_param', 'fold_param', 'y', 'create_model_container', 'transform_target_method_param', 'logging_param', 'n_jobs_param', 'seed', 'imputation_regressor', 'display_container', 'log_plots_param', 'imputation_classifier', 'transform_target_param', 'html_param', 'experiment__', 'data_before_preprocess', 'y_test', '_all_models', 'pycaret_globals', 'exp_name_log', '_internal_pipeline', 'fold_groups_param', 'X_train', 'fix_imbalance_method_param', 'master_model_container', 'prep_pipe', 'fold_shuffle_param'}
+2022-08-07 02:40:21,950:INFO:Preparing display monitor
+2022-08-07 02:40:21,950:INFO:Preparing display monitor
+2022-08-07 02:40:21,957:INFO:Importing libraries
+2022-08-07 02:40:21,957:INFO:Copying data for preprocessing
+2022-08-07 02:40:21,959:INFO:Declaring preprocessing parameters
+2022-08-07 02:40:21,960:INFO:Creating preprocessing pipeline
+2022-08-07 02:40:21,964:INFO:Preprocessing pipeline created successfully
+2022-08-07 02:40:21,964:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2022-08-07 02:40:21,964:INFO:Creating global containers
+2022-08-07 02:40:35,930:INFO:PyCaret Supervised Module
+2022-08-07 02:40:35,930:INFO:ML Usecase: regression
+2022-08-07 02:40:35,930:INFO:version 2.2.3
+2022-08-07 02:40:35,930:INFO:Initializing setup()
+2022-08-07 02:40:35,930:INFO:setup(target=Price, ml_usecase=regression, available_plots={'parameter': 'Hyperparameters', 'residuals': 'Residuals', 'error': 'Prediction Error', 'cooks': 'Cooks Distance', 'rfe': 'Feature Selection', 'learning': 'Learning Curve', 'manifold': 'Manifold Learning', 'vc': 'Validation Curve', 'feature': 'Feature Importance', 'feature_all': 'Feature Importance (All)', 'tree': 'Decision Tree'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=None, categorical_imputation=constant, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=mean, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=False, normalize_method=zscore, transformation=False, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=False, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=False, multicollinearity_threshold=0.9, remove_perfect_collinearity=True, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=False, feature_selection_threshold=0.8, feature_selection_method=classic, feature_interaction=False, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=False, transform_target_method=box-cox, data_split_shuffle=True, data_split_stratify=False, fold_strategy=kfold, fold=10, fold_shuffle=False, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=None, log_experiment=False, experiment_name=None, log_plots=False, log_profile=False, log_data=False, silent=False, verbose=True, profile=False, profile_kwargs=None, display=None)
+2022-08-07 02:40:35,930:INFO:Checking environment
+2022-08-07 02:40:35,930:INFO:python_version: 3.8.13
+2022-08-07 02:40:35,930:INFO:python_build: ('default', 'Mar 25 2022 06:15:30')
+2022-08-07 02:40:35,930:INFO:machine: x86_64
+2022-08-07 02:40:35,930:INFO:platform: Linux-5.15.0-43-generic-x86_64-with-glibc2.10
+2022-08-07 02:40:35,931:INFO:Memory: svmem(total=24999211008, available=20431806464, percent=18.3, used=3304947712, free=9255849984, active=3184050176, inactive=10670678016, buffers=566509568, cached=11871903744, shared=853803008, slab=871972864)
+2022-08-07 02:40:35,931:INFO:Physical Core: 4
+2022-08-07 02:40:35,931:INFO:Logical Core: 8
+2022-08-07 02:40:35,931:INFO:Checking libraries
+2022-08-07 02:40:35,932:INFO:pd==1.4.3
+2022-08-07 02:40:35,932:INFO:numpy==1.23.1
+2022-08-07 02:40:35,932:INFO:sklearn==1.1.2
+2022-08-07 02:40:35,932:INFO:xgboost==1.5.1
+2022-08-07 02:40:35,932:INFO:lightgbm==3.3.2
+2022-08-07 02:40:35,932:INFO:catboost==1.0.6
+2022-08-07 02:40:35,932:INFO:mlflow==1.26.1
+2022-08-07 02:40:35,932:INFO:Checking Exceptions
+2022-08-07 02:40:35,932:INFO:Declaring global variables
+2022-08-07 02:40:35,932:INFO:USI: 6cba
+2022-08-07 02:40:35,932:INFO:pycaret_globals: {'fix_imbalance_param', 'X_test', 'iterative_imputation_iters_param', '_ml_usecase', 'target_param', 'y_train', 'USI', '_available_plots', 'fold_generator', '_all_models_internal', 'X', 'gpu_param', '_all_metrics', '_gpu_n_jobs_param', 'stratify_param', 'fold_param', 'y', 'create_model_container', 'transform_target_method_param', 'logging_param', 'n_jobs_param', 'seed', 'imputation_regressor', 'display_container', 'log_plots_param', 'imputation_classifier', 'transform_target_param', 'html_param', 'experiment__', 'data_before_preprocess', 'y_test', '_all_models', 'pycaret_globals', 'exp_name_log', '_internal_pipeline', 'fold_groups_param', 'X_train', 'fix_imbalance_method_param', 'master_model_container', 'prep_pipe', 'fold_shuffle_param'}
+2022-08-07 02:40:35,932:INFO:Preparing display monitor
+2022-08-07 02:40:35,932:INFO:Preparing display monitor
+2022-08-07 02:40:35,939:INFO:Importing libraries
+2022-08-07 02:40:35,939:INFO:Copying data for preprocessing
+2022-08-07 02:40:35,941:INFO:Declaring preprocessing parameters
+2022-08-07 02:40:35,941:INFO:Creating preprocessing pipeline
+2022-08-07 02:40:35,946:INFO:Preprocessing pipeline created successfully
+2022-08-07 02:40:35,946:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2022-08-07 02:40:35,946:INFO:Creating global containers
+2022-08-07 02:40:40,081:INFO:PyCaret Supervised Module
+2022-08-07 02:40:40,081:INFO:ML Usecase: classification
+2022-08-07 02:40:40,081:INFO:version 2.2.3
+2022-08-07 02:40:40,081:INFO:Initializing setup()
+2022-08-07 02:40:40,081:INFO:setup(target=species, ml_usecase=classification, available_plots={'parameter': 'Hyperparameters', 'auc': 'AUC', 'confusion_matrix': 'Confusion Matrix', 'threshold': 'Threshold', 'pr': 'Precision Recall', 'error': 'Prediction Error', 'class_report': 'Class Report', 'rfe': 'Feature Selection', 'learning': 'Learning Curve', 'manifold': 'Manifold Learning', 'calibration': 'Calibration Curve', 'vc': 'Validation Curve', 'dimension': 'Dimensions', 'feature': 'Feature Importance', 'feature_all': 'Feature Importance (All)', 'boundary': 'Decision Boundary', 'lift': 'Lift Chart', 'gain': 'Gain Chart', 'tree': 'Decision Tree'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=None, categorical_imputation=constant, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=mean, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=False, normalize_method=zscore, transformation=False, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=False, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=False, multicollinearity_threshold=0.9, remove_perfect_collinearity=True, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=False, feature_selection_threshold=0.8, feature_selection_method=classic, feature_interaction=False, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=False, transform_target_method=box-cox, data_split_shuffle=True, data_split_stratify=False, fold_strategy=stratifiedkfold, fold=10, fold_shuffle=False, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=123, log_experiment=False, experiment_name=None, log_plots=False, log_profile=False, log_data=False, silent=False, verbose=True, profile=False, profile_kwargs=None, display=None)
+2022-08-07 02:40:40,081:INFO:Checking environment
+2022-08-07 02:40:40,081:INFO:python_version: 3.8.13
+2022-08-07 02:40:40,081:INFO:python_build: ('default', 'Mar 25 2022 06:15:30')
+2022-08-07 02:40:40,082:INFO:machine: x86_64
+2022-08-07 02:40:40,082:INFO:platform: Linux-5.15.0-43-generic-x86_64-with-glibc2.10
+2022-08-07 02:40:40,082:INFO:Memory: svmem(total=24999211008, available=20428574720, percent=18.3, used=3297611776, free=9252601856, active=3184058368, inactive=10673205248, buffers=566517760, cached=11882479616, shared=864370688, slab=871972864)
+2022-08-07 02:40:40,082:INFO:Physical Core: 4
+2022-08-07 02:40:40,082:INFO:Logical Core: 8
+2022-08-07 02:40:40,082:INFO:Checking libraries
+2022-08-07 02:40:40,082:INFO:pd==1.4.3
+2022-08-07 02:40:40,082:INFO:numpy==1.23.1
+2022-08-07 02:40:40,082:INFO:sklearn==1.1.2
+2022-08-07 02:40:40,082:INFO:xgboost==1.5.1
+2022-08-07 02:40:40,082:INFO:lightgbm==3.3.2
+2022-08-07 02:40:40,082:INFO:catboost==1.0.6
+2022-08-07 02:40:40,082:INFO:mlflow==1.26.1
+2022-08-07 02:40:40,083:INFO:Checking Exceptions
+2022-08-07 02:40:40,083:INFO:Declaring global variables
+2022-08-07 02:40:40,083:INFO:USI: 3cf5
+2022-08-07 02:40:40,083:INFO:pycaret_globals: {'fix_imbalance_param', 'X_test', 'iterative_imputation_iters_param', '_ml_usecase', 'target_param', 'y_train', 'USI', '_available_plots', 'fold_generator', '_all_models_internal', 'X', 'gpu_param', '_all_metrics', '_gpu_n_jobs_param', 'stratify_param', 'fold_param', 'y', 'create_model_container', 'transform_target_method_param', 'logging_param', 'n_jobs_param', 'seed', 'imputation_regressor', 'display_container', 'log_plots_param', 'imputation_classifier', 'transform_target_param', 'html_param', 'experiment__', 'data_before_preprocess', 'y_test', '_all_models', 'pycaret_globals', 'exp_name_log', '_internal_pipeline', 'fold_groups_param', 'X_train', 'fix_imbalance_method_param', 'master_model_container', 'prep_pipe', 'fold_shuffle_param'}
+2022-08-07 02:40:40,083:INFO:Preparing display monitor
+2022-08-07 02:40:40,083:INFO:Preparing display monitor
+2022-08-07 02:40:40,089:INFO:Importing libraries
+2022-08-07 02:40:40,089:INFO:Copying data for preprocessing
+2022-08-07 02:40:40,091:INFO:Declaring preprocessing parameters
+2022-08-07 02:40:40,091:INFO:Creating preprocessing pipeline
+2022-08-07 02:40:40,092:INFO:Preprocessing pipeline created successfully
+2022-08-07 02:40:40,092:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2022-08-07 02:40:40,092:INFO:Creating global containers
+2022-08-07 02:40:41,154:INFO:Initializing create_model()
+2022-08-07 02:40:41,154:INFO:create_model(estimator=lr, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, verbose=True, system=True, metrics=None, display=None, kwargs={})
+2022-08-07 02:40:41,154:INFO:Checking exceptions
+2022-08-07 02:41:10,650:INFO:PyCaret Supervised Module
+2022-08-07 02:41:10,650:INFO:ML Usecase: classification
+2022-08-07 02:41:10,650:INFO:version 2.2.3
+2022-08-07 02:41:10,650:INFO:Initializing setup()
+2022-08-07 02:41:10,650:INFO:setup(target=Price, ml_usecase=classification, available_plots={'parameter': 'Hyperparameters', 'auc': 'AUC', 'confusion_matrix': 'Confusion Matrix', 'threshold': 'Threshold', 'pr': 'Precision Recall', 'error': 'Prediction Error', 'class_report': 'Class Report', 'rfe': 'Feature Selection', 'learning': 'Learning Curve', 'manifold': 'Manifold Learning', 'calibration': 'Calibration Curve', 'vc': 'Validation Curve', 'dimension': 'Dimensions', 'feature': 'Feature Importance', 'feature_all': 'Feature Importance (All)', 'boundary': 'Decision Boundary', 'lift': 'Lift Chart', 'gain': 'Gain Chart', 'tree': 'Decision Tree'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=None, categorical_imputation=constant, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=mean, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=False, normalize_method=zscore, transformation=False, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=False, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=False, multicollinearity_threshold=0.9, remove_perfect_collinearity=True, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=False, feature_selection_threshold=0.8, feature_selection_method=classic, feature_interaction=False, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=False, transform_target_method=box-cox, data_split_shuffle=False, data_split_stratify=False, fold_strategy=stratifiedkfold, fold=10, fold_shuffle=False, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=5, log_experiment=False, experiment_name=None, log_plots=False, log_profile=False, log_data=False, silent=False, verbose=True, profile=False, profile_kwargs=None, display=None)
+2022-08-07 02:41:10,650:INFO:Checking environment
+2022-08-07 02:41:10,650:INFO:python_version: 3.8.13
+2022-08-07 02:41:10,650:INFO:python_build: ('default', 'Mar 25 2022 06:15:30')
+2022-08-07 02:41:10,650:INFO:machine: x86_64
+2022-08-07 02:41:10,650:INFO:platform: Linux-5.15.0-43-generic-x86_64-with-glibc2.10
+2022-08-07 02:41:10,650:INFO:Memory: svmem(total=24999211008, available=20434153472, percent=18.3, used=3301687296, free=9258057728, active=3184164864, inactive=10664923136, buffers=566624256, cached=11872841728, shared=854716416, slab=871944192)
+2022-08-07 02:41:10,651:INFO:Physical Core: 4
+2022-08-07 02:41:10,651:INFO:Logical Core: 8
+2022-08-07 02:41:10,651:INFO:Checking libraries
+2022-08-07 02:41:10,651:INFO:pd==1.4.3
+2022-08-07 02:41:10,651:INFO:numpy==1.23.1
+2022-08-07 02:41:10,651:INFO:sklearn==1.1.2
+2022-08-07 02:41:10,651:INFO:xgboost==1.5.1
+2022-08-07 02:41:10,651:INFO:lightgbm==3.3.2
+2022-08-07 02:41:10,651:INFO:catboost==1.0.6
+2022-08-07 02:41:10,651:INFO:mlflow==1.26.1
+2022-08-07 02:41:10,651:INFO:Checking Exceptions
+2022-08-07 02:41:10,652:INFO:Declaring global variables
+2022-08-07 02:41:10,652:INFO:USI: 54cb
+2022-08-07 02:41:10,652:INFO:pycaret_globals: {'fix_imbalance_param', 'X_test', 'iterative_imputation_iters_param', '_ml_usecase', 'target_param', 'y_train', 'USI', '_available_plots', 'fold_generator', '_all_models_internal', 'X', 'gpu_param', '_all_metrics', '_gpu_n_jobs_param', 'stratify_param', 'fold_param', 'y', 'create_model_container', 'transform_target_method_param', 'logging_param', 'n_jobs_param', 'seed', 'imputation_regressor', 'display_container', 'log_plots_param', 'imputation_classifier', 'transform_target_param', 'html_param', 'experiment__', 'data_before_preprocess', 'y_test', '_all_models', 'pycaret_globals', 'exp_name_log', '_internal_pipeline', 'fold_groups_param', 'X_train', 'fix_imbalance_method_param', 'master_model_container', 'prep_pipe', 'fold_shuffle_param'}
+2022-08-07 02:41:10,652:INFO:Preparing display monitor
+2022-08-07 02:41:10,652:INFO:Preparing display monitor
+2022-08-07 02:41:10,658:INFO:Importing libraries
+2022-08-07 02:41:10,658:INFO:Copying data for preprocessing
+2022-08-07 02:41:10,660:INFO:Declaring preprocessing parameters
+2022-08-07 02:41:10,660:INFO:Creating preprocessing pipeline
+2022-08-07 02:41:10,665:INFO:Preprocessing pipeline created successfully
+2022-08-07 02:41:10,666:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2022-08-07 02:41:10,666:INFO:Creating global containers
+2022-08-07 02:42:02,209:INFO:PyCaret Supervised Module
+2022-08-07 02:42:02,209:INFO:ML Usecase: classification
+2022-08-07 02:42:02,209:INFO:version 2.2.3
+2022-08-07 02:42:02,209:INFO:Initializing setup()
+2022-08-07 02:42:02,209:INFO:setup(target=species, ml_usecase=classification, available_plots={'parameter': 'Hyperparameters', 'auc': 'AUC', 'confusion_matrix': 'Confusion Matrix', 'threshold': 'Threshold', 'pr': 'Precision Recall', 'error': 'Prediction Error', 'class_report': 'Class Report', 'rfe': 'Feature Selection', 'learning': 'Learning Curve', 'manifold': 'Manifold Learning', 'calibration': 'Calibration Curve', 'vc': 'Validation Curve', 'dimension': 'Dimensions', 'feature': 'Feature Importance', 'feature_all': 'Feature Importance (All)', 'boundary': 'Decision Boundary', 'lift': 'Lift Chart', 'gain': 'Gain Chart', 'tree': 'Decision Tree'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=None, categorical_imputation=constant, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=mean, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=False, normalize_method=zscore, transformation=False, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=False, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=False, multicollinearity_threshold=0.9, remove_perfect_collinearity=True, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=False, feature_selection_threshold=0.8, feature_selection_method=classic, feature_interaction=False, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=False, transform_target_method=box-cox, data_split_shuffle=True, data_split_stratify=False, fold_strategy=stratifiedkfold, fold=10, fold_shuffle=True, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=1, log_experiment=False, experiment_name=None, log_plots=False, log_profile=False, log_data=False, silent=False, verbose=True, profile=False, profile_kwargs=None, display=None)
+2022-08-07 02:42:02,209:INFO:Checking environment
+2022-08-07 02:42:02,209:INFO:python_version: 3.8.13
+2022-08-07 02:42:02,209:INFO:python_build: ('default', 'Mar 25 2022 06:15:30')
+2022-08-07 02:42:02,210:INFO:machine: x86_64
+2022-08-07 02:42:02,210:INFO:platform: Linux-5.15.0-43-generic-x86_64-with-glibc2.10
+2022-08-07 02:42:02,210:INFO:Memory: svmem(total=24999211008, available=20450009088, percent=18.2, used=3284758528, free=9273831424, active=3184238592, inactive=10660892672, buffers=566693888, cached=11873927168, shared=855789568, slab=871952384)
+2022-08-07 02:42:02,210:INFO:Physical Core: 4
+2022-08-07 02:42:02,210:INFO:Logical Core: 8
+2022-08-07 02:42:02,210:INFO:Checking libraries
+2022-08-07 02:42:02,210:INFO:pd==1.4.3
+2022-08-07 02:42:02,211:INFO:numpy==1.23.1
+2022-08-07 02:42:02,211:INFO:sklearn==1.1.2
+2022-08-07 02:42:02,211:INFO:xgboost==1.5.1
+2022-08-07 02:42:02,211:INFO:lightgbm==3.3.2
+2022-08-07 02:42:02,211:INFO:catboost==1.0.6
+2022-08-07 02:42:02,211:INFO:mlflow==1.26.1
+2022-08-07 02:42:02,211:INFO:Checking Exceptions
+2022-08-07 02:42:02,211:INFO:Declaring global variables
+2022-08-07 02:42:02,211:INFO:USI: 64f4
+2022-08-07 02:42:02,211:INFO:pycaret_globals: {'fix_imbalance_param', 'X_test', 'iterative_imputation_iters_param', '_ml_usecase', 'target_param', 'y_train', 'USI', '_available_plots', 'fold_generator', '_all_models_internal', 'X', 'gpu_param', '_all_metrics', '_gpu_n_jobs_param', 'stratify_param', 'fold_param', 'y', 'create_model_container', 'transform_target_method_param', 'logging_param', 'n_jobs_param', 'seed', 'imputation_regressor', 'display_container', 'log_plots_param', 'imputation_classifier', 'transform_target_param', 'html_param', 'experiment__', 'data_before_preprocess', 'y_test', '_all_models', 'pycaret_globals', 'exp_name_log', '_internal_pipeline', 'fold_groups_param', 'X_train', 'fix_imbalance_method_param', 'master_model_container', 'prep_pipe', 'fold_shuffle_param'}
+2022-08-07 02:42:02,211:INFO:Preparing display monitor
+2022-08-07 02:42:02,211:INFO:Preparing display monitor
+2022-08-07 02:42:02,218:INFO:Importing libraries
+2022-08-07 02:42:02,218:INFO:Copying data for preprocessing
+2022-08-07 02:42:02,220:INFO:Declaring preprocessing parameters
+2022-08-07 02:42:02,220:INFO:Creating preprocessing pipeline
+2022-08-07 02:42:02,221:INFO:Preprocessing pipeline created successfully
+2022-08-07 02:42:02,221:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2022-08-07 02:42:02,221:INFO:Creating global containers
+2022-08-07 02:42:02,222:INFO:Internal pipeline: Pipeline(memory=None, steps=[('empty_step', 'passthrough')], verbose=False)
+2022-08-07 02:45:56,236:INFO:PyCaret Supervised Module
+2022-08-07 02:45:56,237:INFO:ML Usecase: classification
+2022-08-07 02:45:56,237:INFO:version 2.2.3
+2022-08-07 02:45:56,237:INFO:Initializing setup()
+2022-08-07 02:45:56,237:INFO:setup(target=species, ml_usecase=classification, available_plots={'parameter': 'Hyperparameters', 'auc': 'AUC', 'confusion_matrix': 'Confusion Matrix', 'threshold': 'Threshold', 'pr': 'Precision Recall', 'error': 'Prediction Error', 'class_report': 'Class Report', 'rfe': 'Feature Selection', 'learning': 'Learning Curve', 'manifold': 'Manifold Learning', 'calibration': 'Calibration Curve', 'vc': 'Validation Curve', 'dimension': 'Dimensions', 'feature': 'Feature Importance', 'feature_all': 'Feature Importance (All)', 'boundary': 'Decision Boundary', 'lift': 'Lift Chart', 'gain': 'Gain Chart', 'tree': 'Decision Tree'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=None, categorical_imputation=constant, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=mean, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=False, normalize_method=zscore, transformation=False, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=False, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=False, multicollinearity_threshold=0.9, remove_perfect_collinearity=True, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=False, feature_selection_threshold=0.8, feature_selection_method=classic, feature_interaction=False, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=False, transform_target_method=box-cox, data_split_shuffle=True, data_split_stratify=False, fold_strategy=stratifiedkfold, fold=10, fold_shuffle=True, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=1, log_experiment=False, experiment_name=None, log_plots=False, log_profile=False, log_data=False, silent=False, verbose=True, profile=False, profile_kwargs=None, display=None)
+2022-08-07 02:45:56,237:INFO:Checking environment
+2022-08-07 02:45:56,237:INFO:python_version: 3.8.13
+2022-08-07 02:45:56,237:INFO:python_build: ('default', 'Mar 25 2022 06:15:30')
+2022-08-07 02:45:56,237:INFO:machine: x86_64
+2022-08-07 02:45:56,237:INFO:platform: Linux-5.15.0-43-generic-x86_64-with-glibc2.10
+2022-08-07 02:45:56,237:INFO:Memory: svmem(total=24999211008, available=21646753792, percent=13.4, used=2397962240, free=10477494272, active=3215773696, inactive=9708371968, buffers=567054336, cached=11556700160, shared=545841152, slab=867762176)
+2022-08-07 02:45:56,237:INFO:Physical Core: 4
+2022-08-07 02:45:56,237:INFO:Logical Core: 8
+2022-08-07 02:45:56,237:INFO:Checking libraries
+2022-08-07 02:45:56,237:INFO:pd==1.4.3
+2022-08-07 02:45:56,237:INFO:numpy==1.23.1
+2022-08-07 02:45:56,237:INFO:sklearn==1.1.2
+2022-08-07 02:45:56,237:INFO:xgboost==1.5.1
+2022-08-07 02:45:56,237:INFO:lightgbm==3.3.2
+2022-08-07 02:45:56,237:INFO:catboost==1.0.6
+2022-08-07 02:45:56,237:INFO:mlflow==1.26.1
+2022-08-07 02:45:56,237:INFO:Checking Exceptions
+2022-08-07 02:45:56,237:INFO:Declaring global variables
+2022-08-07 02:45:56,237:INFO:USI: 7bb2
+2022-08-07 02:45:56,237:INFO:pycaret_globals: {'fix_imbalance_param', 'X_test', 'iterative_imputation_iters_param', '_ml_usecase', 'target_param', 'y_train', 'USI', '_available_plots', 'fold_generator', '_all_models_internal', 'X', 'gpu_param', '_all_metrics', '_gpu_n_jobs_param', 'stratify_param', 'fold_param', 'y', 'create_model_container', 'transform_target_method_param', 'logging_param', 'n_jobs_param', 'seed', 'imputation_regressor', 'display_container', 'log_plots_param', 'imputation_classifier', 'transform_target_param', 'html_param', 'experiment__', 'data_before_preprocess', 'y_test', '_all_models', 'pycaret_globals', 'exp_name_log', '_internal_pipeline', 'fold_groups_param', 'X_train', 'fix_imbalance_method_param', 'master_model_container', 'prep_pipe', 'fold_shuffle_param'}
+2022-08-07 02:45:56,237:INFO:Preparing display monitor
+2022-08-07 02:45:56,237:INFO:Preparing display monitor
+2022-08-07 02:45:56,242:INFO:Importing libraries
+2022-08-07 02:45:56,242:INFO:Copying data for preprocessing
+2022-08-07 02:45:56,244:INFO:Declaring preprocessing parameters
+2022-08-07 02:45:56,245:INFO:Creating preprocessing pipeline
+2022-08-07 02:45:56,246:INFO:Preprocessing pipeline created successfully
+2022-08-07 02:45:56,246:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2022-08-07 02:45:56,246:INFO:Creating global containers
+2022-08-07 02:45:56,247:INFO:Internal pipeline: Pipeline(memory=None, steps=[('empty_step', 'passthrough')], verbose=False)
+2022-08-07 02:46:00,218:INFO:Creating grid variables
+2022-08-07 02:46:00,219:INFO:create_model_container: 0
+2022-08-07 02:46:00,219:INFO:master_model_container: 0
+2022-08-07 02:46:00,219:INFO:display_container: 1
+2022-08-07 02:46:13,037:INFO:Initializing create_model()
+2022-08-07 02:46:13,037:INFO:create_model(estimator=lr, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, verbose=True, system=True, metrics=None, display=None, kwargs={})
+2022-08-07 02:46:13,037:INFO:Checking exceptions
+2022-08-07 02:46:13,037:INFO:Preparing display monitor
+2022-08-07 02:46:13,044:INFO:Importing libraries
+2022-08-07 02:46:13,044:INFO:Copying training dataset
+2022-08-07 02:46:13,044:INFO:Defining folds
+2022-08-07 02:46:13,044:INFO:Declaring metric variables
+2022-08-07 02:46:13,048:INFO:Importing untrained model
+2022-08-07 02:46:13,051:INFO:Logistic Regression Imported succesfully
+2022-08-07 02:46:13,058:INFO:Starting cross validation
+2022-08-07 02:46:13,058:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=1, shuffle=True), n_jobs=-1
+2022-08-07 02:46:15,277:INFO:Calculating mean and std
+2022-08-07 02:46:15,278:INFO:Creating metrics dataframe
+2022-08-07 02:46:15,285:INFO:Finalizing model
+2022-08-07 02:46:15,295:INFO:Uploading results into container
+2022-08-07 02:46:15,296:INFO:Uploading model into container now
+2022-08-07 02:46:15,296:INFO:create_model_container: 1
+2022-08-07 02:46:15,296:INFO:master_model_container: 1
+2022-08-07 02:46:15,296:INFO:display_container: 2
+2022-08-07 02:46:15,296:INFO:LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=1, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)
+2022-08-07 02:46:15,296:INFO:create_model() succesfully completed......................................
+2022-08-07 02:46:36,733:INFO:PyCaret Supervised Module
+2022-08-07 02:46:36,733:INFO:ML Usecase: classification
+2022-08-07 02:46:36,733:INFO:version 2.2.3
+2022-08-07 02:46:36,733:INFO:Initializing setup()
+2022-08-07 02:46:36,733:INFO:setup(target=species, ml_usecase=classification, available_plots={'parameter': 'Hyperparameters', 'auc': 'AUC', 'confusion_matrix': 'Confusion Matrix', 'threshold': 'Threshold', 'pr': 'Precision Recall', 'error': 'Prediction Error', 'class_report': 'Class Report', 'rfe': 'Feature Selection', 'learning': 'Learning Curve', 'manifold': 'Manifold Learning', 'calibration': 'Calibration Curve', 'vc': 'Validation Curve', 'dimension': 'Dimensions', 'feature': 'Feature Importance', 'feature_all': 'Feature Importance (All)', 'boundary': 'Decision Boundary', 'lift': 'Lift Chart', 'gain': 'Gain Chart', 'tree': 'Decision Tree'}, train_size=0.7, test_data=None, preprocess=True, imputation_type=simple, iterative_imputation_iters=5, categorical_features=None, categorical_imputation=constant, categorical_iterative_imputer=lightgbm, ordinal_features=None, high_cardinality_features=None, high_cardinality_method=frequency, numeric_features=None, numeric_imputation=mean, numeric_iterative_imputer=lightgbm, date_features=None, ignore_features=None, normalize=False, normalize_method=zscore, transformation=False, transformation_method=yeo-johnson, handle_unknown_categorical=True, unknown_categorical_method=least_frequent, pca=False, pca_method=linear, pca_components=None, ignore_low_variance=False, combine_rare_levels=False, rare_level_threshold=0.1, bin_numeric_features=None, remove_outliers=False, outliers_threshold=0.05, remove_multicollinearity=False, multicollinearity_threshold=0.9, remove_perfect_collinearity=True, create_clusters=False, cluster_iter=20, polynomial_features=False, polynomial_degree=2, trigonometry_features=False, polynomial_threshold=0.1, group_features=None, group_names=None, feature_selection=False, feature_selection_threshold=0.8, feature_selection_method=classic, feature_interaction=False, feature_ratio=False, interaction_threshold=0.01, fix_imbalance=False, fix_imbalance_method=None, transform_target=False, transform_target_method=box-cox, data_split_shuffle=True, data_split_stratify=False, fold_strategy=stratifiedkfold, fold=10, fold_shuffle=True, fold_groups=None, n_jobs=-1, use_gpu=False, custom_pipeline=None, html=True, session_id=1, log_experiment=False, experiment_name=None, log_plots=False, log_profile=False, log_data=False, silent=False, verbose=True, profile=False, profile_kwargs=None, display=None)
+2022-08-07 02:46:36,733:INFO:Checking environment
+2022-08-07 02:46:36,734:INFO:python_version: 3.8.13
+2022-08-07 02:46:36,734:INFO:python_build: ('default', 'Mar 25 2022 06:15:30')
+2022-08-07 02:46:36,734:INFO:machine: x86_64
+2022-08-07 02:46:36,734:INFO:platform: Linux-5.15.0-43-generic-x86_64-with-glibc2.10
+2022-08-07 02:46:36,734:INFO:Memory: svmem(total=24999211008, available=20599992320, percent=17.6, used=3444535296, free=9430659072, active=3249631232, inactive=10718756864, buffers=567115776, cached=11556900864, shared=546029568, slab=867643392)
+2022-08-07 02:46:36,735:INFO:Physical Core: 4
+2022-08-07 02:46:36,735:INFO:Logical Core: 8
+2022-08-07 02:46:36,735:INFO:Checking libraries
+2022-08-07 02:46:36,735:INFO:pd==1.4.3
+2022-08-07 02:46:36,735:INFO:numpy==1.23.1
+2022-08-07 02:46:36,735:INFO:sklearn==1.1.2
+2022-08-07 02:46:36,735:INFO:xgboost==1.5.1
+2022-08-07 02:46:36,735:INFO:lightgbm==3.3.2
+2022-08-07 02:46:36,735:INFO:catboost==1.0.6
+2022-08-07 02:46:36,735:INFO:mlflow==1.26.1
+2022-08-07 02:46:36,735:INFO:Checking Exceptions
+2022-08-07 02:46:36,735:INFO:Declaring global variables
+2022-08-07 02:46:36,735:INFO:USI: ec79
+2022-08-07 02:46:36,736:INFO:pycaret_globals: {'fix_imbalance_param', 'X_test', 'iterative_imputation_iters_param', '_ml_usecase', 'target_param', 'y_train', 'USI', '_available_plots', 'fold_generator', '_all_models_internal', 'X', 'gpu_param', '_all_metrics', '_gpu_n_jobs_param', 'stratify_param', 'fold_param', 'y', 'create_model_container', 'transform_target_method_param', 'logging_param', 'n_jobs_param', 'seed', 'imputation_regressor', 'display_container', 'log_plots_param', 'imputation_classifier', 'transform_target_param', 'html_param', 'experiment__', 'data_before_preprocess', 'y_test', '_all_models', 'pycaret_globals', 'exp_name_log', '_internal_pipeline', 'fold_groups_param', 'X_train', 'fix_imbalance_method_param', 'master_model_container', 'prep_pipe', 'fold_shuffle_param'}
+2022-08-07 02:46:36,736:INFO:Preparing display monitor
+2022-08-07 02:46:36,736:INFO:Preparing display monitor
+2022-08-07 02:46:36,743:INFO:Importing libraries
+2022-08-07 02:46:36,743:INFO:Copying data for preprocessing
+2022-08-07 02:46:36,745:INFO:Declaring preprocessing parameters
+2022-08-07 02:46:36,745:INFO:Creating preprocessing pipeline
+2022-08-07 02:46:36,746:INFO:Preprocessing pipeline created successfully
+2022-08-07 02:46:36,746:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2022-08-07 02:46:36,746:INFO:Creating global containers
+2022-08-07 02:46:36,747:INFO:Internal pipeline: Pipeline(memory=None, steps=[('empty_step', 'passthrough')], verbose=False)
+2022-08-07 02:46:37,949:INFO:Creating grid variables
+2022-08-07 02:46:37,950:INFO:create_model_container: 0
+2022-08-07 02:46:37,950:INFO:master_model_container: 0
+2022-08-07 02:46:37,950:INFO:display_container: 1

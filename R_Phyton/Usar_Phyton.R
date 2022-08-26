@@ -32,15 +32,16 @@ getwd()
 #-----------------------------------------------------------------------------
 
 #Pandas
-py_install(packages = c("pandas", "scikit-learn"))
+#py_install(packages = c("pandas", "scikit-learn"))
 
-py_install(packages = c("pyfolio")
+#py_install(packages = c("pyfolio")
 
 #Crer el objeto de R, que usa las funciones en R
 pd=import("pandas")
 
 
 pd$array(c(1, 2, 3))
+
 
 
 ################################################################################
