@@ -168,29 +168,6 @@ model@sigma.t
 
 
 
-omega_dat[1]=model@fit$coef[6]
-
-
-i=1
-
-
-while (i<=400) {
-  
-  model=garchFit( ~ arma(1,3) + garch(1, 1),data=dx_t[1:(100+i)], trace = F)
-  omega_dat[i]=model@fit$coef[6]
-  
-  i=i+1
-  
-  
-}
-
-
-plot(omega_dat, type="l")
-
-omega_dat
-
-
-
 
 
 
