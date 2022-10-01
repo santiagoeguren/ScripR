@@ -15,20 +15,20 @@ library(MixedTS)
 # Density of MixedTS with Gamma
 #-------------------------------------------------------------------------------
 
-ParamEx1=setMixedTS.param(mu0=0, mu=0, sigma=0.5, a=2,
-                           alpha=1.72, lambda_p=1, lambda_m=1, 
+ParamEx1=setMixedTS.param(mu0=-0.0681, mu=0.0601, sigma=1.0530, a=1.1670,
+                           alpha=1.4717, lambda_p=1.0280, lambda_m=1.0311, 
                            Mixing="Gamma")
 
 
 
-
+#help(setMixedTS.param)
 
 
 
 #-------------------------------------------------------------------------------
 #Generar valores aleatorios
 
-dat=rMixedTS(1000,object=ParamEx1)
+dat=rMixedTS(10000,object=ParamEx1)
 
 dat@Data
 
@@ -36,17 +36,17 @@ dat@Data
 #-------------------------------------------------------------------------------
 #Determinar funcion densidad
 
-x=seq(-2,2,length=1000)
+x=seq(-2,2,length=10000)
 
-dens=dMixedTS(x=x,object=ParamEx1,setSup=0.1,setInf=-0.1,N=2^7)
+dens=dMixedTS(x=x,object=ParamEx1,setSup=0.01,setInf=-0.1,N=2^7)
 
-
+#help(dMixedTS)
 
 #-------------------------------------------------------------------------------
 #Graficar
 
 plot(dens)
-hist(dat@Data, n = 30, probability = TRUE,border = "white",
+hist(dat@Data,n=60, probability = TRUE,border = "white",
      col = "lightgray",add=T)
 
 
@@ -60,17 +60,10 @@ hist(dat@Data, n = 30, probability = TRUE,border = "white",
 
 
 
-
-ParamEx1=setMixedTS.param(mu0=0.1, mu=1, sigma=0.1, a=0.1,
-                           alpha=0.1, lambda_p=0.1, lambda_m=0.1, Mixing="Gamma")
-
-
-
-
 Rand1=rMixedTS(x=5000,object=ParamEx1, setSup=10,setInf=-10,N=2^9)
 
 
-Rand1@Data=rnorm(100,100,2)
+#Rand1@Data=rnorm(100,100,2)
 
 
 
