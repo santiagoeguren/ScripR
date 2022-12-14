@@ -98,5 +98,38 @@ shapiro.test(mu_hat)
 qqnorm(mu_hat)
 
 
+################################################################################
+#Propiedad Estabilidad
+################################################################################
+
+
+x_sum=NULL
+
+
+
+i=1
+
+while (i<=1000) {
+  
+  
+  
+  x_sum[i]=sum(rCTS(100, 1.5, c = 0.01, ell = 0.084, mu = 0))
+  
+  
+  
+  
+  i=i+1
+  
+}
+
+hist(x_sum,probability = T)
+curve(dnorm(x, mean(x_sum),sd(x_sum)),add=TRUE,col="Blue")
+
+
+
+shapiro.test(x_sum)
+
+qqnorm(x_sum)
+
 
 

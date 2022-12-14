@@ -22,14 +22,14 @@ library(urca)
 #Armar serie x[t]
 ##############################################################################
 
-fi_1=0.9
+fi_1=0.01
 fi_2=0
 fi_3=0
 fi_4=0
 
-sgma=1
+sgma=0.001
 
-c=2
+c=0
 
 
 
@@ -176,7 +176,7 @@ summary(lm(x_t_0~x_t_1))
 
 cor(x_t_0,x_t_1)
 
-0.889563*(sd(x_t_0)/sd(x_t_1))
+0.9787643*(sd(x_t_0)/sd(x_t_1))
 
 
 
@@ -189,7 +189,7 @@ summary(lm(x_t_0~x_t_2))
 
 cor(x_t_0,x_t_2)
 
--0.004785*(sd(x_t_0)/sd(x_t_2))
+9.582e-01*(sd(x_t_0)/sd(x_t_2))
 
 
 
@@ -373,8 +373,8 @@ i=1
 
 x_T1=0
 
-fi_estimado= 0.9001
-constante=20.01552*(1-fi_estimado)
+fi_estimado= 0.9787
+constante=-6e-04*(1-fi_estimado)
 
 i=0
 
@@ -437,12 +437,12 @@ summary(lm(x_t_0~x_t_1+x_t_2+x_t_3+x_t_4+x_t_5+x_t_6+x_t_7+x_t_8+x_t_9+x_t_10))
 
 summary(fit)
 
-a_0= 20.0322*(1- 0.8941024)
+a_0= -1.281e-05*(1-  9.730e-01)
 
 
 #Para x_T_1
 
-x_T1=0.8941024*x_t[length(x_t)]+ a_0
+x_T1= 9.730e-01 *x_t[length(x_t)]+ a_0
 x_T1
 
 

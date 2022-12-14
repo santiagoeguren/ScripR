@@ -30,8 +30,8 @@ alpa_ordenada=10
 delta=0.01
 
 
-psi=0.5
-pi_1=0.5
+psi=0
+pi_1=0
 pi_2=0
 
 
@@ -106,14 +106,15 @@ var(dx_t)
 
 #Estimación x_t
 
-fit= Arima(x_t, order=c(0,2,0), include.drift =F,include.mean = T,include.constant = T)
+fit= Arima(x_t, order=c(0,1,1), include.drift =F,include.mean = T,include.constant = T)
 summary(fit)
 
+help(Arima)
 
 
 #Estimación dx_t
 
-fit_d= Arima(dx_t, order=c(0,1,0), include.drift = T,include.mean = T,include.constant = T)
+fit_d= Arima(dx_t, order=c(0,0,0), include.drift = F,include.mean = T,include.constant = T)
 summary(fit_d)
 
 
@@ -124,7 +125,7 @@ summary(fit_d)
 #--------------------------------------------------------------------------------
 
 
-plot(forecast(fit, h=1000),ylab="x_t", xlab="t",col="blue", xlim = c(9500,11000))
+plot(forecast(fit, h=500),ylab="x_t", xlab="t",col="blue", xlim = c(9500,10500))
 ARIMA_prediccion=forecast(fit, h=40)
 ARIMA_prediccion
 

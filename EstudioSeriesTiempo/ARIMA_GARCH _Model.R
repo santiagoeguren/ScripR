@@ -34,12 +34,12 @@ library(plotly)
 
 #AR
 
-phi_1=0.4
-phi_2=0.3
+phi_1=0
+phi_2=0
 
 #MA
-tita_1=0.3
-tita_2=0.5
+tita_1=0
+tita_2=0
   
 #mu
 mu=0
@@ -51,15 +51,15 @@ beta=0
 #Garch(p,q)
 #Omega
 
-alpa_0=1
+alpa_0=0.01
 
 #Z
 
-alpa_1=0
+alpa_1=0.5
 
 #Sigma^2
 
-beta_1=0
+beta_1=0.5
 
 
 
@@ -284,7 +284,7 @@ p
 
 #Generar modelo
 
-model=garchFit(x_training ~ arma(0, 0) + garch(1, 1), data = x, trace = F)
+model=garchFit( x_training~ arma(0, 0) + garch(1, 1),data = x_training, trace = F)
 summary(model)             
 
 #help(garchFit)
@@ -348,6 +348,40 @@ g
 
 p=ggplotly(g)
 #p
+
+
+
+
+sd(x_training)
+sd(model@residuals)
+
+sd(model@residuals/model@sigma.t)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
