@@ -51,15 +51,15 @@ beta=0
 #Garch(p,q)
 #Omega
 
-alpa_0=0.01
+alpa_0=0.5
 
 #Z
 
-alpa_1=0.5
+alpa_1=0.3
 
 #Sigma^2
 
-beta_1=0.5
+beta_1=0.3
 
 
 
@@ -296,6 +296,9 @@ summary(model)
 
 predict(model,n.ahead=test,plot=TRUE,conf=.95)
       
+
+sqrt(0.64868/(1-0.17477-0.31171))
+
 #plot(model@sigma.t, type="l")
 
 #---------------------------------------------------------------------------

@@ -3,8 +3,9 @@
 ################################################################################
 
 
-library("nvmix")
+library(nvmix)
 
+library(e1071)
 
 ################################################################################
 #Crear Modelo
@@ -42,7 +43,7 @@ loc=rep(0, d)
 #Inverse Gamma
 
 #Definir los grados de libertad
-df=2
+df=5
 
 #qmix=function(u, df){
    
@@ -67,9 +68,18 @@ df=2
 #2Forma: Crear una muestra
 
 
-rt=rnvmix(200, qmix = "inverse.gamma", loc = loc, scale = A, df = df)
+rt=rnvmix(10000, qmix = "inverse.gamma", loc = loc, scale = A, df = df)
 hist(rt)
 
+
+
+mean(rt)
+
+var(rt)
+sd(rt)
+skewness(rt)
+
+kurtosis(rt)
 
 #-------------------------------------------------------------------------------
 #Estimation
@@ -77,7 +87,7 @@ hist(rt)
 #fit_t=fitnvmix(rt, qmix = qmix, mix.param.bounds = c(0.5, 10))
 #summary(fit_t)
 
-fit_t=fitnvmix(rt, qmix =  "inverse.gamma", mix.param.bounds = c(0.5, 10))
+fit_t=fitnvmix(rt, qmix =  "inverse.gamma", mix.param.bounds = c(0.01, 10))
 summary(fit_t)
 
 
